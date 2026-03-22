@@ -10,3 +10,20 @@ def heartb(k):
            math.cos(3*k) - \
            math.cos(4*k)
     
+speed(0)
+tracer(2, 0)
+bgcolor('black')
+pensize(2)
+
+for i in range(2000):
+
+    color( '#f73487')
+
+    x = hearta(i) * 20
+    y = heartb(i) * 20
+
+    goto(x, y)
+
+    goto(0, 0)
+
+done()
