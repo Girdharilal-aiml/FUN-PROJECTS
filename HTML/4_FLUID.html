@@ -151,7 +151,33 @@
             ctx.globalAlpha = 1;
         }
 
-        
+        function handleParticles() {
+            for (let i = 0; i < spots.length; i++) {
+                spots[i].update();
+                spots[i].draw();
+
+                for (let j = i; j < spots.length; j++) {
+                    const dx = spots[i].x - spots[j].x;
+                    const dy = spots[i].y - spots[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 90) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = spots[i].color;
+                        ctx.lineWidth = spots[i].size / 3;
+                        ctx.moveTo(spots[i].x, spots[i].y);
+                        ctx.lineTo(spots[j].x, spots[j].y);
+                        ctx.stroke();
+                        ctx.closePath();
+                    }
+                }
+
+                if (spots[i].size <= 0.3 || spots[i].life > spots[i].maxLife) {
+                    spots.splice(i, 1);
+                    i--;
+                }
+            }
+        }
 
         
 
