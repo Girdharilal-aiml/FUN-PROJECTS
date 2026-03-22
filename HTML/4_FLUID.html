@@ -90,6 +90,18 @@
             }
         });
 
+        // Supernova Burst on Click
+        window.addEventListener('mousedown', function(event) {
+            for (let i = 0; i < 30; i++) {
+                spots.push(new Particle());
+            }
+        });
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        
+
         
 
     </script>
