@@ -81,7 +81,17 @@
             canvas.height = window.innerHeight;
         });
 
-       
+        window.addEventListener('mousemove', function(event) {
+            mouse.x = event.x;
+            mouse.y = event.y;
+            // Mouse move se bhi thode particles create hote hain
+            for (let i = 0; i < 2; i++) {
+                spots.push(new Particle());
+            }
+        });
+
+        
+
     </script>
 </body>
 </html>
