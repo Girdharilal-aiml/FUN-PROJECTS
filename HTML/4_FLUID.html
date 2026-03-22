@@ -179,7 +179,25 @@
             }
         }
 
-        
+        function animate() {
+            // Dark blueish fade for trail
+            ctx.fillStyle = 'rgba(2, 2, 5, 0.15)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            drawStars();
+
+            // Additive blending for glow
+            ctx.globalCompositeOperation = 'lighter';
+            handleParticles();
+            ctx.globalCompositeOperation = 'source-over';
+            
+            hue += 2;
+            requestAnimationFrame(animate);
+        }
+
+        window.onload = function() {
+            animate();
+        };
 
     </script>
 </body>
