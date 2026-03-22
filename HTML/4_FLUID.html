@@ -26,7 +26,26 @@
             z-index: 10;
             width: 100%;
         }
-        
+        .nebula-text {
+            background: linear-gradient(to right, #00f2fe, #7117ea, #ea6227, #f0ff00);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-flow 5s linear infinite;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        .instruction {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
