@@ -136,6 +136,23 @@
             });
         }
 
+        function drawStars() {
+            ctx.fillStyle = 'white';
+            stars.forEach(star => {
+                ctx.globalAlpha = star.opacity;
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+                ctx.fill();
+                // Twinkle effect
+                star.opacity += (Math.random() * 0.02 - 0.01);
+                if (star.opacity < 0) star.opacity = 0;
+                if (star.opacity > 1) star.opacity = 1;
+            });
+            ctx.globalAlpha = 1;
+        }
+
+        
+
         
 
     </script>
