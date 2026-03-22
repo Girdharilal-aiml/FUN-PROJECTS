@@ -19,7 +19,12 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        
+        window.addEventListener('mousedown', () => isMouseDown = true);
+        window.addEventListener('mouseup', () => isMouseDown = false);
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
 
         
 
