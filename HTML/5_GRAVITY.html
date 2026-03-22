@@ -36,12 +36,61 @@
                 this.color = `hsl(${Math.random() * 50 + 180}, 100%, 70%)`; // Cold Blues
             }
 
-            
+            update() {
+                if (isMouseDown) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    const force = 500 / (dist + 10); // Gravity formula
+                    
+                    // Acceleration towards mouse
+                    this.vx += (dx / dist) * force;
+                    this.vy += (dy / dist) * force;
+                }
 
-            
+                // Apply friction so they don't fly away forever
+                this.vx *= 0.95;
+                this.vy *= 0.95;
+                
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Wrap around edges
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height;
+                if (this.y > canvas.height) this.y = 0;
+            }
+
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
         }
 
-        
+        function init() {
+            particles = [];
+            for (let i = 0; i < 1200; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            // Faint clear for "motion blur"
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
     </script>
 </body>
 </html>
