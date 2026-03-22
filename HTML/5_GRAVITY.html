@@ -26,7 +26,20 @@
             mouse.y = e.clientY;
         });
 
-        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 2; // Velocity X
+                this.vy = (Math.random() - 0.5) * 2; // Velocity Y
+                this.size = Math.random() * 2;
+                this.color = `hsl(${Math.random() * 50 + 180}, 100%, 70%)`; // Cold Blues
+            }
+
+            
+
+            
+        }
 
         
     </script>
