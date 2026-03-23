@@ -38,6 +38,13 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const textInput = document.getElementById("textInput");
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const STAR_COUNT = 2500;  
+let particles = [];
+let forming = false;
+
 
 
 
