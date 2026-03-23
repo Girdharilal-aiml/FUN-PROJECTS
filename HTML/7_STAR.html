@@ -114,6 +114,32 @@ function formText(str){
   let fontSize = Math.min(off.width * 0.18, off.height * 0.24, 180);
   let lines = [cleanText];
 
+  offCtx.fillStyle="white";
+  offCtx.textAlign="center";
+  offCtx.textBaseline="middle";
+
+  while(fontSize >= 28){
+    offCtx.font=`bold ${fontSize}px Arial`;
+    lines = wrapLines(offCtx, cleanText, maxTextWidth);
+
+    const lineHeight = fontSize * 1.12;
+    const blockHeight = lines.length * lineHeight;
+    const widestLine = Math.max(...lines.map(line => offCtx.measureText(line).width));
+
+    if(blockHeight <= maxTextHeight && widestLine <= maxTextWidth && lines.length <= 5){
+      break;
+    }
+    fontSize -= 4;
+  }
+
+  offCtx.font=`bold ${fontSize}px Arial`;
+  const drawLineHeight = fontSize * 1.12;
+  const textBlockHeight = lines.length * drawLineHeight;
+  let startY = off.height / 2 - textBlockHeight / 2 + drawLineHeight / 2;
+
+  lines.forEach((line, i)=>{
+    offCtx.fillText(line, off.width / 2, startY + i * drawLineHeight);
+  });
 
 
 
