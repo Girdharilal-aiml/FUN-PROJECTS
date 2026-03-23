@@ -141,11 +141,75 @@ function formText(str){
     offCtx.fillText(line, off.width / 2, startY + i * drawLineHeight);
   });
 
+  const data = offCtx.getImageData(0,0,off.width,off.height).data;
 
+  let points = [];
+  const sampleStep = cleanText.length > 28 ? 4 : 5;
 
+  for(let y=0;y<off.height;y+=sampleStep){
+    for(let x=0;x<off.width;x+=sampleStep){
+      const index=(y*off.width+x)*4;
+      if(data[index+3]>150){
+        points.push({x,y});
+      }
+    }
+  }
 
+  for(let i=0;i<particles.length;i++){
+    if(points.length > 0){
+      const idx = Math.floor(i * points.length / particles.length);
+      const target = points[Math.min(idx, points.length - 1)];
+      particles[i].tx = target.x;
+      particles[i].ty = target.y;
+    }else{
+      particles[i].tx = Math.random()*canvas.width;
+      particles[i].ty = Math.random()*canvas.height;
+    }
+  }
+}
 
+function scatter(){
+  forming = false;
+  particles.forEach(p=>{
+    p.tx = Math.random()*canvas.width;
+    p.ty = Math.random()*canvas.height;
+  });
+}
 
+function animate(){
+  ctx.fillStyle="rgba(0,0,0,0.35)";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach(p=>{
+    p.update();
+    p.draw();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+init();
+animate();
+
+textInput.addEventListener("input",(e)=>{
+  if(e.target.value.trim()===""){
+    scatter();
+  }else{
+    formText(e.target.value);
+  }
+});
+
+window.addEventListener("resize", ()=>{
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  init();
+
+  if(textInput.value.trim()===""){
+    scatter();
+  }else{
+    formText(textInput.value);
+  }
+});
 </script>
 
 </body>
