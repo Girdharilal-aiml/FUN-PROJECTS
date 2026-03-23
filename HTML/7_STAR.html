@@ -99,6 +99,26 @@ function wrapLines(context, text, maxWidth){
   return lines;
 }
 
+function formText(str){
+  forming = true;
+
+  const off = document.createElement("canvas");
+  const offCtx = off.getContext("2d");
+
+  off.width = canvas.width;
+  off.height = canvas.height;
+
+  const cleanText = str.trim();
+  const maxTextWidth = off.width * 0.82;
+  const maxTextHeight = off.height * 0.5;
+  let fontSize = Math.min(off.width * 0.18, off.height * 0.24, 180);
+  let lines = [cleanText];
+
+
+
+
+
+
 
 </script>
 
