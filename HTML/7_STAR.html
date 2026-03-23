@@ -85,7 +85,18 @@ function wrapLines(context, text, maxWidth){
   const lines = [];
   let current = words[0];
 
-  
+  for(let i=1;i<words.length;i++){
+    const candidate = `${current} ${words[i]}`;
+    if(context.measureText(candidate).width <= maxWidth){
+      current = candidate;
+    }else{
+      lines.push(current);
+      current = words[i];
+    }
+  }
+
+  lines.push(current);
+  return lines;
 }
 
 
