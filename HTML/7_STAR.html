@@ -71,7 +71,12 @@ class Star{
   }
 }
 
-
+function init(){
+  particles=[];
+  for(let i=0;i<STAR_COUNT;i++){
+    particles.push(new Star());
+  }
+}
 
 
 
