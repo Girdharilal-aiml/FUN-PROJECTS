@@ -51,7 +51,15 @@
             }
         }
 
-        
+        function animate() {
+            // This semi-transparent rectangle creates the "trail" effect
+            ctx.fillStyle = 'rgba(0,0,0,0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            
+            requestAnimationFrame(animate);
+        }
+        animate();
     </script>
 </body>
 </html>
