@@ -43,3 +43,11 @@ def draw_amazing_heart():
             
         t.penup()
 
+    screen.tracer(5) 
+    for i in range(400):
+        color_hsv = colorsys.hsv_to_rgb(i/400, 0.8, 1)
+        t.pencolor(color_hsv)
+        
+        angle = i * 0.1
+        dist = (i / 400) * 20
+        
