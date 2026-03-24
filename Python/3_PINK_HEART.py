@@ -34,7 +34,12 @@ def draw_amazing_heart():
             if j == 0: t.pencolor("#ff0055")
             elif j == 1: t.pencolor("#ff77aa")
             else: t.pencolor("white")
-           
+            
+            x = heart_x(angle) * scale
+            y = heart_y(angle) * scale
+            
+            t.goto(x, y)
+            t.pendown()
             
         t.penup()
 
