@@ -28,3 +28,13 @@ def draw_amazing_heart():
         scale = 20 + (j * 2) 
         t.pensize(5 - j)
         
+        for i in range(0, 630, 5):
+            angle = i / 100
+            
+            if j == 0: t.pencolor("#ff0055")
+            elif j == 1: t.pencolor("#ff77aa")
+            else: t.pencolor("white")
+           
+            
+        t.penup()
+
