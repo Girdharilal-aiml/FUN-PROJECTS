@@ -51,3 +51,12 @@ def draw_amazing_heart():
         angle = i * 0.1
         dist = (i / 400) * 20
         
+        x = heart_x(angle) * dist
+        y = heart_y(angle) * dist
+        
+        t.penup()
+        t.goto(x, y)
+        t.pendown()
+        t.setheading(t.towards(0,0))
+        t.forward(2) 
+
