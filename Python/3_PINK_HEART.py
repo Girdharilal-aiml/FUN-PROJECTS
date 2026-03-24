@@ -17,3 +17,14 @@ def heart_x(k):
 
 def heart_y(k):
     return 12 * math.cos(k) - 5 * math.cos(2*k) - 2 * math.cos(3*k) - math.cos(4*k)
+
+def draw_amazing_heart():
+
+    screen.tracer(2)
+    
+    for j in range(3): 
+        t.penup()
+       
+        scale = 20 + (j * 2) 
+        t.pensize(5 - j)
+        
