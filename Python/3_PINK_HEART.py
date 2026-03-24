@@ -60,3 +60,11 @@ def draw_amazing_heart():
         t.setheading(t.towards(0,0))
         t.forward(2) 
 
+    t.penup()
+    t.goto(0, -50)
+    t.color("white")
+    t.write("i love you ❤️", align="center", font=("Verdana", 20, "bold italic"))
+
+draw_amazing_heart()
+screen.update()
+turtle.done()
