@@ -11,3 +11,5 @@ def draw_fractal_crystal():
     t = turtle.Turtle()
     t.speed(0)
     t.hideturtle()
+    t.left(90)
+    t.up()
