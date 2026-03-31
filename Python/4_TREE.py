@@ -26,3 +26,6 @@ def draw_fractal_crystal():
         
         t.forward(branch_len)
         
+        new_len = branch_len * 0.75
+        new_hue = (hue + 0.1) % 1.0
+        
