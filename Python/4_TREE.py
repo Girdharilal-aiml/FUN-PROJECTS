@@ -50,3 +50,7 @@ def draw_fractal_crystal():
         t.pencolor(colorsys.hsv_to_rgb(i/36, 1, 1))
         t.circle(200, 10)
         t.dot(10)
+
+    print("Complete! Click the window to exit.")
+    screen.exitonclick()
+
