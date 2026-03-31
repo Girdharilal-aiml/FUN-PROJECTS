@@ -13,3 +13,6 @@ def draw_fractal_crystal():
     t.hideturtle()
     t.left(90)
     t.up()
+    t.goto(0, -250)
+    t.down()
+
