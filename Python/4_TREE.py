@@ -40,3 +40,6 @@ def draw_fractal_crystal():
         t.backward(branch_len)
         t.down()
 
+    print("Drawing the Neon Fractal Crystal...")
+    draw_branch(120, 25, 0.0)
+    
