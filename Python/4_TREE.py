@@ -16,3 +16,6 @@ def draw_fractal_crystal():
     t.goto(0, -250)
     t.down()
 
+    def draw_branch(branch_len, angle, hue):
+        if branch_len < 5:
+            return
