@@ -7,3 +7,5 @@ def draw_fractal_crystal():
     screen.setup(width=800, height=800)
     screen.title("Ultra-Lajawab Python Fractal Effect")
     screen.tracer(50)
+
+    t = turtle.Turtle()
