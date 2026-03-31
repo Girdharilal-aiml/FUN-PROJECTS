@@ -19,3 +19,7 @@ def draw_fractal_crystal():
     def draw_branch(branch_len, angle, hue):
         if branch_len < 5:
             return
+        
+        color = colorsys.hsv_to_rgb(hue, 1, 1)
+        t.pencolor(color)
+        t.width(branch_len / 10)
