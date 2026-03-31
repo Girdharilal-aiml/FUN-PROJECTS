@@ -9,3 +9,5 @@ def draw_fractal_crystal():
     screen.tracer(50)
 
     t = turtle.Turtle()
+    t.speed(0)
+    t.hideturtle()
