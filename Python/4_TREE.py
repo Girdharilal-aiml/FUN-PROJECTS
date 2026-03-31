@@ -54,3 +54,5 @@ def draw_fractal_crystal():
     print("Complete! Click the window to exit.")
     screen.exitonclick()
 
+if __name__ == "__main__":
+    draw_fractal_crystal()
