@@ -23,3 +23,6 @@ def draw_fractal_crystal():
         color = colorsys.hsv_to_rgb(hue, 1, 1)
         t.pencolor(color)
         t.width(branch_len / 10)
+        
+        t.forward(branch_len)
+        
