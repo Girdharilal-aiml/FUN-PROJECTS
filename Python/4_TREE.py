@@ -32,3 +32,6 @@ def draw_fractal_crystal():
         t.right(angle)
         draw_branch(new_len, angle, new_hue)
         
+        t.left(angle * 2)
+        draw_branch(new_len, angle, new_hue)
+        
