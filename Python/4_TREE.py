@@ -46,3 +46,7 @@ def draw_fractal_crystal():
     t.up()
     t.goto(0, 0)
     t.setheading(0)
+    for i in range(36):
+        t.pencolor(colorsys.hsv_to_rgb(i/36, 1, 1))
+        t.circle(200, 10)
+        t.dot(10)
