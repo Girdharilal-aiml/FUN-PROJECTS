@@ -30,3 +30,4 @@ def grow_tree_step_by_step(branch_len, thickness):
     else:
         t.color("#8d6e63") 
 
+    t.pensize(thickness)
