@@ -22,3 +22,6 @@ def grow_tree_step_by_step(branch_len, thickness):
         t.pensize(2)
         t.forward(branch_len)
         t.dot(random.randint(3, 6)) 
+        t.backward(branch_len)
+        return
+
