@@ -33,3 +33,6 @@ def grow_tree_step_by_step(branch_len, thickness):
     t.pensize(thickness)
     t.forward(branch_len)
 
+    pos = t.pos()
+    heading = t.heading()
+
