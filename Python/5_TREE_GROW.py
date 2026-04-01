@@ -9,3 +9,4 @@ screen.title("Live Growing Dense Fractal Tree")
 screen.tracer(1) 
 
 t = turtle.Turtle()
+t.hideturtle()
