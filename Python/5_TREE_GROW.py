@@ -10,3 +10,4 @@ screen.tracer(1)
 
 t = turtle.Turtle()
 t.hideturtle()
+t.speed(0) 
