@@ -61,3 +61,6 @@ def grow_tree_step_by_step(branch_len, thickness):
 
 print("Tree is starting to grow... Watch closely!")
 grow_tree_step_by_step(115, 12)
+
+print("Growth complete!")
+screen.exitonclick()
