@@ -42,3 +42,4 @@ def grow_tree_step_by_step(branch_len, thickness):
     t.right(angle)
     grow_tree_step_by_step(branch_len - reduction, thickness * 0.75)
     
+    t.penup()
