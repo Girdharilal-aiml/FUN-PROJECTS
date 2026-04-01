@@ -43,3 +43,5 @@ def grow_tree_step_by_step(branch_len, thickness):
     grow_tree_step_by_step(branch_len - reduction, thickness * 0.75)
     
     t.penup()
+    t.goto(pos)
+    t.setheading(heading)
