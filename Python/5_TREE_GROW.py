@@ -20,3 +20,4 @@ def grow_tree_step_by_step(branch_len, thickness):
     if branch_len < 6:
         t.color(random.choice(["#27ae60", "#2ecc71", "#a2d149", "#155e37"]))
         t.pensize(2)
+        t.forward(branch_len)
