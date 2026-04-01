@@ -16,3 +16,5 @@ t.penup()
 t.goto(0, -350) 
 t.pendown()
 
+def grow_tree_step_by_step(branch_len, thickness):
+    if branch_len < 6:
