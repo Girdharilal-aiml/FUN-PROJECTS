@@ -28,3 +28,5 @@ def grow_tree_step_by_step(branch_len, thickness):
     if branch_len > 45:
         t.color("#5d4037")
     else:
+        t.color("#8d6e63") 
+
