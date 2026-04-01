@@ -52,3 +52,12 @@ def grow_tree_step_by_step(branch_len, thickness):
 
     t.penup()
     t.goto(pos)
+    t.setheading(heading)
+    t.pendown()
+    
+    if branch_len > 30:
+        t.forward(branch_len * 0.2)
+        grow_tree_step_by_step(branch_len * 0.65, thickness * 0.7)
+
+print("Tree is starting to grow... Watch closely!")
+grow_tree_step_by_step(115, 12)
