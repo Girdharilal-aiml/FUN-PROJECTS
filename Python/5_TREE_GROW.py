@@ -39,3 +39,6 @@ def grow_tree_step_by_step(branch_len, thickness):
     angle = random.uniform(20, 30)
     reduction = random.uniform(8, 14)
 
+    t.right(angle)
+    grow_tree_step_by_step(branch_len - reduction, thickness * 0.75)
+    
