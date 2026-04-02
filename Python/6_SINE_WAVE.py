@@ -17,3 +17,4 @@ t.penup()
 frame = 0
 
 def draw():
+    global frame
