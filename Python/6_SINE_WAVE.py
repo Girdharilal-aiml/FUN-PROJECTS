@@ -24,3 +24,4 @@ def draw():
         freq   = 1 + wave * 0.5
         amp    = 60 - wave * 3
         offset = wave * 30 - 180
+        hue    = (wave / 12 + frame * 0.003) % 1.0
