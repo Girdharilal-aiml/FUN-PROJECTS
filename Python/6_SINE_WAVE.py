@@ -34,3 +34,7 @@ def draw():
 
         t.penup()
         t.goto(-430, offset)
+        t.pendown()
+
+        for x in range(-430, 431, 3):
+            y = amp * math.sin(freq * (x + frame * 2) * 0.015) \
