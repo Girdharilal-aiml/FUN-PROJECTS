@@ -22,3 +22,4 @@ def draw():
 
     for wave in range(12):
         freq   = 1 + wave * 0.5
+        amp    = 60 - wave * 3
