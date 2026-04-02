@@ -33,3 +33,4 @@ def draw():
         t.width(1 + wave % 3)
 
         t.penup()
+        t.goto(-430, offset)
