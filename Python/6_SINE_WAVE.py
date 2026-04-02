@@ -29,3 +29,4 @@ def draw():
         val    = 0.7 + 0.3 * math.sin(frame * 0.05 + wave)
         r, g, b = colorsys.hsv_to_rgb(hue, sat, val)
 
+        t.pencolor(r, g, b)
