@@ -18,3 +18,5 @@ frame = 0
 
 def draw():
     global frame
+    t.clear()
+
