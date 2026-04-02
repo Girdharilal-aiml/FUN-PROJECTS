@@ -30,3 +30,6 @@ def draw():
         r, g, b = colorsys.hsv_to_rgb(hue, sat, val)
 
         t.pencolor(r, g, b)
+        t.width(1 + wave % 3)
+
+        t.penup()
