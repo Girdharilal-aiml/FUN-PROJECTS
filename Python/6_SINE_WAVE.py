@@ -14,3 +14,5 @@ t.speed(0)
 t.width(2)
 t.penup()
 
+frame = 0
+
