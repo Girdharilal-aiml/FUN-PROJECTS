@@ -20,3 +20,4 @@ def draw():
     global frame
     t.clear()
 
+    for wave in range(12):
