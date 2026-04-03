@@ -53,3 +53,9 @@ def write_text(x, y, text, color, size=18, bold=False):
 def draw_character(blink=False, mouth_open=False, bounce=0):
     by = bounce  # vertical offset for bounce
 
+    # --- body ---
+    circle_fill(0, -120 + by, 55, "#ffcce0")
+
+    # --- head ---
+    circle_fill(0, -10 + by, 70, "#ffcce0")
+
