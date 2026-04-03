@@ -16,3 +16,8 @@ def clear(): t.clear()
 
 def circle_fill(x, y, r, color):
     t.penup(); t.goto(x, y - r)
+    t.pendown(); t.fillcolor(color)
+    t.begin_fill()
+    t.circle(r)
+    t.end_fill()
+    t.penup()
