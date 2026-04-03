@@ -12,3 +12,7 @@ t = turtle.Turtle()
 t.hideturtle()
 t.speed(0)
 
+def clear(): t.clear()
+
+def circle_fill(x, y, r, color):
+    t.penup(); t.goto(x, y - r)
