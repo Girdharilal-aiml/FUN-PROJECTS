@@ -136,3 +136,11 @@ def scene(blink=False, mouth_open=False, bounce=0,
         draw_heart(hx, hy, hsize, hcol)
 
     draw_character(blink=blink, mouth_open=mouth_open, bounce=bounce)
+
+    if msg:
+        write_text(0, 210, msg, "#ff85aa", size=22, bold=True)
+    if msg2:
+        write_text(0, 175, msg2, "#cc88ff", size=14)
+
+    turtle.update()
+
