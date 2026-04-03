@@ -44,3 +44,9 @@ def draw_star(x, y, size, color):
     for _ in range(5):
         t.forward(size); t.right(144)
     t.penup()
+
+def write_text(x, y, text, color, size=18, bold=False):
+    t.penup(); t.goto(x, y)
+    font = ("Comic Sans MS", size, "bold" if bold else "normal")
+    t.pencolor(color); t.write(text, align="center", font=font)
+
