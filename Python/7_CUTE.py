@@ -28,3 +28,7 @@ def draw_heart(x, y, size, color):
     t.fillcolor(color); t.pencolor(color)
     t.begin_fill()
     t.setheading(140)
+    for _ in range(200):
+        angle = _ / 200 * math.tau
+        hx = size * 16 * math.sin(angle)**3
+        hy = size * (13*math.cos(angle) - 5*math.cos(2*angle)
