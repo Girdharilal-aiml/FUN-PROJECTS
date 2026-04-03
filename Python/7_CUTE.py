@@ -158,3 +158,20 @@ for _ in range(3):
     scene(stars=bg_stars)
     time.sleep(0.08)
 
+# 2. blink
+scene(blink=True, stars=bg_stars)
+time.sleep(0.12)
+scene(stars=bg_stars)
+time.sleep(0.1)
+
+# 3. bounce + "Hi!!"
+for b in [0, 8, 14, 8, 0]:
+    scene(bounce=b, stars=bg_stars, msg="Hi there!! ♡")
+    time.sleep(0.07)
+
+# 4. mouth open — talking
+for _ in range(2):
+    scene(mouth_open=True, stars=bg_stars, msg="Hi there!! ♡")
+    time.sleep(0.15)
+    scene(stars=bg_stars, msg="Hi there!! ♡")
+    time.sleep(0.12)
