@@ -86,3 +86,7 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
     t.begin_fill(); t.circle(9); t.end_fill()
     t.penup(); t.goto( 27, 5 + by)
     t.begin_fill(); t.circle(9); t.end_fill()
+
+    # --- nose ---
+    circle_fill(0, 8 + by, 3, "#ff85aa")
+
