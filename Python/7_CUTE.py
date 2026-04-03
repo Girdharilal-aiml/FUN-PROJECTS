@@ -65,3 +65,10 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
     circle_fill(-58, 30 + by, 12, "#ff85aa")
     circle_fill( 58, 30 + by, 12, "#ff85aa")
 
+    # --- eyes ---
+    if blink:
+        t.pencolor("#333"); t.width(3)
+        t.penup(); t.goto(-25, 15 + by); t.pendown()
+        t.goto(-10, 15 + by); t.penup()
+        t.goto( 10, 15 + by); t.pendown()
+        t.goto( 25, 15 + by); t.penup()
