@@ -127,3 +127,12 @@ def scene(blink=False, mouth_open=False, bounce=0,
           hearts=[], stars=[], msg="", msg2=""):
     clear()
 
+    # background stars
+    for sx, sy, sc in stars:
+        t.penup(); t.goto(sx, sy)
+        t.pencolor(sc); t.dot(3)
+
+    for hx, hy, hsize, hcol in hearts:
+        draw_heart(hx, hy, hsize, hcol)
+
+    draw_character(blink=blink, mouth_open=mouth_open, bounce=bounce)
