@@ -9,3 +9,6 @@ s.title("Hi! ♡")
 s.tracer(0)
 
 t = turtle.Turtle()
+t.hideturtle()
+t.speed(0)
+
