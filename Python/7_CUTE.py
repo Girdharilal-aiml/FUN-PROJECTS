@@ -122,3 +122,8 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
     t.penup(); t.goto( 20, -170 + by); t.pendown()
     t.setheading(290); t.forward(30)
     t.penup()
+
+def scene(blink=False, mouth_open=False, bounce=0,
+          hearts=[], stars=[], msg="", msg2=""):
+    clear()
+
