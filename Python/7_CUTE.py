@@ -93,3 +93,12 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
     # --- mouth ---
     t.pencolor("#cc5577"); t.width(3)
     t.penup()
+    if mouth_open:
+        t.goto(-14, -6 + by); t.pendown()
+        t.setheading(-60)
+        t.circle(16, 120); t.penup()
+        # little teeth
+        t.fillcolor("white")
+        t.goto(-8, -10 + by); t.begin_fill()
+        for _ in range(4): t.forward(8); t.right(90)
+        t.end_fill()
