@@ -21,3 +21,10 @@ def circle_fill(x, y, r, color):
     t.circle(r)
     t.end_fill()
     t.penup()
+
+def draw_heart(x, y, size, color):
+    t.penup(); t.goto(x, y)
+    t.pendown()
+    t.fillcolor(color); t.pencolor(color)
+    t.begin_fill()
+    t.setheading(140)
