@@ -102,3 +102,7 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
         t.goto(-8, -10 + by); t.begin_fill()
         for _ in range(4): t.forward(8); t.right(90)
         t.end_fill()
+    else:
+        t.goto(-14, -5 + by); t.pendown()
+        t.setheading(-60)
+        t.circle(16, 120); t.penup()
