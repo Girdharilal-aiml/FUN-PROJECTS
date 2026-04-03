@@ -175,3 +175,33 @@ for _ in range(2):
     time.sleep(0.15)
     scene(stars=bg_stars, msg="Hi there!! ♡")
     time.sleep(0.12)
+
+# 5. hearts appear one by one
+heart_list = []
+positions = [(-120, 180), (120, 190), (-160, 130), (160, 140), (0, 220)]
+colors    = ["#ff4488","#ff88bb","#ff2266","#ffaacc","#cc44ff"]
+sizes     = [1.2, 0.9, 0.8, 1.0, 0.7]
+
+for i, (hx, hy) in enumerate(positions):
+    heart_list.append((hx, hy, sizes[i], colors[i]))
+    scene(stars=bg_stars, hearts=heart_list, msg="Hi there!! ♡")
+    time.sleep(0.18)
+
+# 6. "I like you!" message
+for _ in range(3):
+    scene(mouth_open=True, stars=bg_stars, hearts=heart_list,
+          msg="Hi there!! ♡", msg2="✦  I really like you!  ✦")
+    time.sleep(0.18)
+    scene(stars=bg_stars, hearts=heart_list,
+          msg="Hi there!! ♡", msg2="✦  I really like you!  ✦")
+    time.sleep(0.15)
+
+# 7. final blink + stay
+scene(blink=True, stars=bg_stars, hearts=heart_list,
+      msg="Hi there!! ♡", msg2="✦  I really like you!  ✦")
+time.sleep(0.12)
+scene(stars=bg_stars, hearts=heart_list,
+      msg="Hi there!! ♡", msg2="✦  I really like you!  ✦")
+
+turtle.update()
+s.exitonclick()
