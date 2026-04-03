@@ -90,3 +90,6 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
     # --- nose ---
     circle_fill(0, 8 + by, 3, "#ff85aa")
 
+    # --- mouth ---
+    t.pencolor("#cc5577"); t.width(3)
+    t.penup()
