@@ -106,3 +106,11 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
         t.goto(-14, -5 + by); t.pendown()
         t.setheading(-60)
         t.circle(16, 120); t.penup()
+
+    # --- arms waving ---
+    t.pencolor("#ffb3cc"); t.width(8)
+    t.penup(); t.goto(-55, -90 + by); t.pendown()
+    t.setheading(210); t.forward(35)
+    t.penup(); t.goto( 55, -90 + by); t.pendown()
+    t.setheading(-30); t.forward(35)
+    t.penup()
