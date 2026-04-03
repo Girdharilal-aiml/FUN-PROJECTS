@@ -144,3 +144,17 @@ def scene(blink=False, mouth_open=False, bounce=0,
 
     turtle.update()
 
+# fixed background stars
+import random
+random.seed(42)
+bg_stars = [(random.randint(-280,280), random.randint(-280,280),
+             random.choice(["#ffffff","#ffccff","#ccccff"]))
+            for _ in range(60)]
+
+# ── Animation sequence ─────────────────────────────────────────
+
+# 1. fade in — just character
+for _ in range(3):
+    scene(stars=bg_stars)
+    time.sleep(0.08)
+
