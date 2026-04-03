@@ -50,3 +50,6 @@ def write_text(x, y, text, color, size=18, bold=False):
     font = ("Comic Sans MS", size, "bold" if bold else "normal")
     t.pencolor(color); t.write(text, align="center", font=font)
 
+def draw_character(blink=False, mouth_open=False, bounce=0):
+    by = bounce  # vertical offset for bounce
+
