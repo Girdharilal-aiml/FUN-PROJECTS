@@ -32,3 +32,15 @@ def draw_heart(x, y, size, color):
         angle = _ / 200 * math.tau
         hx = size * 16 * math.sin(angle)**3
         hy = size * (13*math.cos(angle) - 5*math.cos(2*angle)
+                    - 2*math.cos(3*angle) - math.cos(4*angle))
+        t.goto(x + hx, y + hy)
+    t.end_fill()
+    t.penup()
+
+def draw_star(x, y, size, color):
+    t.penup(); t.goto(x, y)
+    t.pencolor(color); t.pendown()
+    t.width(2)
+    for _ in range(5):
+        t.forward(size); t.right(144)
+    t.penup()
