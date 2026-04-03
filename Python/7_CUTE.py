@@ -114,3 +114,11 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
     t.penup(); t.goto( 55, -90 + by); t.pendown()
     t.setheading(-30); t.forward(35)
     t.penup()
+
+    # --- legs ---
+    t.pencolor("#ffb3cc"); t.width(10)
+    t.penup(); t.goto(-20, -170 + by); t.pendown()
+    t.setheading(250); t.forward(30)
+    t.penup(); t.goto( 20, -170 + by); t.pendown()
+    t.setheading(290); t.forward(30)
+    t.penup()
