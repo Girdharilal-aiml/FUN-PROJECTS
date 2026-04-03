@@ -72,3 +72,10 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
         t.goto(-10, 15 + by); t.penup()
         t.goto( 10, 15 + by); t.pendown()
         t.goto( 25, 15 + by); t.penup()
+    else:
+        circle_fill(-18, 18 + by, 10, "white")
+        circle_fill( 18, 18 + by, 10, "white")
+        circle_fill(-18, 16 + by,  6, "#222")
+        circle_fill( 18, 16 + by,  6, "#222")
+        circle_fill(-16, 18 + by,  2, "white")
+        circle_fill( 16, 18 + by,  2, "white")
