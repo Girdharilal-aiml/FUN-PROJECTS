@@ -38,3 +38,13 @@ def draw():
 
         for x in range(-430, 431, 3):
             y = amp * math.sin(freq * (x + frame * 2) * 0.015) \
+              + 18  * math.sin(2.3 * (x + frame)     * 0.02 + wave) \
+              + offset
+            t.goto(x, y)
+
+    s.update()
+    frame += 1
+    s.ontimer(draw, 16)   # ~60 fps
+
+draw()
+s.exitonclick()
