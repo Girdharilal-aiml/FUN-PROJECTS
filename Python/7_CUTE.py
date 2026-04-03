@@ -79,3 +79,10 @@ def draw_character(blink=False, mouth_open=False, bounce=0):
         circle_fill( 18, 16 + by,  6, "#222")
         circle_fill(-16, 18 + by,  2, "white")
         circle_fill( 16, 18 + by,  2, "white")
+
+    # --- blush ---
+    t.penup(); t.goto(-36, 5 + by)
+    t.pencolor("#ffaacc"); t.fillcolor("#ffaacc")
+    t.begin_fill(); t.circle(9); t.end_fill()
+    t.penup(); t.goto( 27, 5 + by)
+    t.begin_fill(); t.circle(9); t.end_fill()
