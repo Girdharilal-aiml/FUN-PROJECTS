@@ -19,3 +19,4 @@ def draw_real_tree():
     def grow_tree(branch_len, stroke_width):
         if branch_len < 10:
             t.pencolor(random.choice(["#32CD32", "#00FF00", "#7FFF00", "#228B22"]))
+            t.pensize(stroke_width)
