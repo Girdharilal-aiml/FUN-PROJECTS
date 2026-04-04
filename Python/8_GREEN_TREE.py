@@ -28,3 +28,5 @@ def draw_real_tree():
             t.pencolor("#4B3621")
         else:
             t.pencolor("#2E8B57") 
+        t.pensize(stroke_width)
+        
