@@ -43,3 +43,5 @@ def draw_real_tree():
         grow_tree(current_len, stroke_width * 0.7)
 
         t.right(angle_left)
+        
+        t.penup()
