@@ -8,3 +8,4 @@ def draw_real_tree():
     screen.title("The Ultimate Sick Green Tree")
     screen.tracer(10)
 
+    t = turtle.Turtle()
