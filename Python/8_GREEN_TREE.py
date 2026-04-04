@@ -6,3 +6,5 @@ def draw_real_tree():
     screen.setup(width=1000, height=800)
     screen.bgcolor("#111111")
     screen.title("The Ultimate Sick Green Tree")
+    screen.tracer(10)
+
