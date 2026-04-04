@@ -12,3 +12,5 @@ def draw_real_tree():
     t.hideturtle()
     t.speed(0)
     t.left(90)
+    t.penup()
+    t.goto(0, -350)
