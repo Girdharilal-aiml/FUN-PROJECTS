@@ -35,3 +35,7 @@ def draw_real_tree():
         t.forward(branch_len)
         angle_left = random.randint(15, 30)
         angle_right = random.randint(15, 30)
+
+        t.right(angle_right)
+        grow_tree(current_len, stroke_width * 0.7)
+        
