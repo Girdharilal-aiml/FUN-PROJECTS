@@ -45,3 +45,6 @@ def draw_real_tree():
         t.right(angle_left)
         
         t.penup()
+        t.backward(branch_len)
+        t.pendown()
+
