@@ -11,3 +11,4 @@ def draw_real_tree():
     t = turtle.Turtle()
     t.hideturtle()
     t.speed(0)
+    t.left(90)
