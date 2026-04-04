@@ -32,3 +32,6 @@ def draw_real_tree():
         
         current_len = branch_len * random.uniform(0.7, 0.9)
         
+        t.forward(branch_len)
+        angle_left = random.randint(15, 30)
+        angle_right = random.randint(15, 30)
