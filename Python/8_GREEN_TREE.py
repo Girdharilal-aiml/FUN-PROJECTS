@@ -48,3 +48,12 @@ def draw_real_tree():
         t.backward(branch_len)
         t.pendown()
 
+    print("Planting your sick green tree...")
+    grow_tree(100, 15)
+    
+    screen.update()
+    print("Nature code executed! Click to exit.")
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    draw_real_tree()
