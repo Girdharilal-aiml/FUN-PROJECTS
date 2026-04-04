@@ -26,3 +26,5 @@ def draw_real_tree():
         
         if branch_len > 60:
             t.pencolor("#4B3621")
+        else:
+            t.pencolor("#2E8B57") 
