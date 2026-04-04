@@ -14,3 +14,5 @@ def draw_real_tree():
     t.left(90)
     t.penup()
     t.goto(0, -350)
+    t.pendown()
+
