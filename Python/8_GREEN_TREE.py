@@ -17,3 +17,4 @@ def draw_real_tree():
     t.pendown()
 
     def grow_tree(branch_len, stroke_width):
+        if branch_len < 10:
