@@ -16,3 +16,4 @@ def draw_real_tree():
     t.goto(0, -350)
     t.pendown()
 
+    def grow_tree(branch_len, stroke_width):
