@@ -9,3 +9,4 @@ def draw_real_tree():
     screen.tracer(10)
 
     t = turtle.Turtle()
+    t.hideturtle()
