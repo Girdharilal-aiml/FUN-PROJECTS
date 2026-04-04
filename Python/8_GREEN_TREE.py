@@ -30,3 +30,5 @@ def draw_real_tree():
             t.pencolor("#2E8B57") 
         t.pensize(stroke_width)
         
+        current_len = branch_len * random.uniform(0.7, 0.9)
+        
