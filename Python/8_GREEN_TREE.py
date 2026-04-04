@@ -20,3 +20,4 @@ def draw_real_tree():
         if branch_len < 10:
             t.pencolor(random.choice(["#32CD32", "#00FF00", "#7FFF00", "#228B22"]))
             t.pensize(stroke_width)
+            t.forward(branch_len)
