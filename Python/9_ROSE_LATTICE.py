@@ -21,3 +21,4 @@ def create_unique_art():
         new_t = turtle.Turtle()
         new_t.speed(0)
         new_t.width(2)
+        new_t.hideturtle()
