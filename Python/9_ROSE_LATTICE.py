@@ -24,3 +24,4 @@ def create_unique_art():
         new_t.hideturtle()
         turtles.append(new_t)
 
+    for i in range(200):
