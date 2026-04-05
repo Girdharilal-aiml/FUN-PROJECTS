@@ -13,3 +13,4 @@ def create_unique_art():
     colors = []
     
     num_colors = 100
+    for i in range(num_colors):
