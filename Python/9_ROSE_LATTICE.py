@@ -9,3 +9,4 @@ def create_unique_art():
     screen.tracer(2)  
     screen.title("Unique Mirrored Fractal Mandala")
 
+    turtles = []
