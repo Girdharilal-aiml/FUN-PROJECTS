@@ -19,3 +19,4 @@ def create_unique_art():
 
     for i in range(4):
         new_t = turtle.Turtle()
+        new_t.speed(0)
