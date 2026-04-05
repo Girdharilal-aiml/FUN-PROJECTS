@@ -17,3 +17,4 @@ def create_unique_art():
         rgb = colorsys.hsv_to_rgb(i / num_colors, 0.8, 1)
         colors.append(rgb)
 
+    for i in range(4):
