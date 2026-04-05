@@ -35,3 +35,6 @@ def create_unique_art():
             t.penup()
             t.goto(0, 0)
             t.setheading(angle_offset + (i * 2.5)) 
+            t.pendown()
+            
+            t.circle(i * 1.2, 90)
