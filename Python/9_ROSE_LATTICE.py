@@ -18,3 +18,4 @@ def create_unique_art():
         colors.append(rgb)
 
     for i in range(4):
+        new_t = turtle.Turtle()
