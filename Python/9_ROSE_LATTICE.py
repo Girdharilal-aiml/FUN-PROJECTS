@@ -44,3 +44,8 @@ def create_unique_art():
             t.forward(i)
 
     screen.update()
+    print("Art Generation Complete! This is a unique mirrored fractal.")
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    create_unique_art()
