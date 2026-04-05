@@ -27,3 +27,4 @@ def create_unique_art():
     for i in range(200):
         current_color = colors[i % num_colors]
         
+        for index, t in enumerate(turtles):
