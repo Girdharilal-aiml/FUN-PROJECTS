@@ -1,3 +1,5 @@
 import turtle
 import colorsys
 
+def create_unique_art():
+
