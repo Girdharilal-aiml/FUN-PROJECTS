@@ -30,3 +30,5 @@ def create_unique_art():
         for index, t in enumerate(turtles):
             t.pencolor(current_color)
             
+            angle_offset = index * 90 
+            
