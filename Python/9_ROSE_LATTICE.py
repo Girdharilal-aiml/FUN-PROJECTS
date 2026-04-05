@@ -32,3 +32,6 @@ def create_unique_art():
             
             angle_offset = index * 90 
             
+            t.penup()
+            t.goto(0, 0)
+            t.setheading(angle_offset + (i * 2.5)) 
