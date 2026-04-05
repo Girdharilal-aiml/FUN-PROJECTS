@@ -38,3 +38,9 @@ def create_unique_art():
             t.pendown()
             
             t.circle(i * 1.2, 90)
+            t.left(60)
+            t.circle(i * 0.6, 90)
+            t.right(120)
+            t.forward(i)
+
+    screen.update()
