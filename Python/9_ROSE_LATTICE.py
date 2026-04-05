@@ -12,3 +12,4 @@ def create_unique_art():
     turtles = []
     colors = []
     
+    num_colors = 100
