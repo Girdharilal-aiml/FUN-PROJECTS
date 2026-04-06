@@ -10,3 +10,4 @@ screen.tracer(10)
 
 t = turtle.Turtle()
 t.speed(0)
+t.width(1)
