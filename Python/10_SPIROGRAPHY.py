@@ -20,3 +20,4 @@ R = 220
 r = 65
 d = 140
 
+for layer in range(8):  
