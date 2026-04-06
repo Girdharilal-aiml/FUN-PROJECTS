@@ -24,3 +24,4 @@ for layer in range(8):
     t.color(colors[layer % len(colors)])
     
     t.penup()
+    t.goto(R - r + d, 0)
