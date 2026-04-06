@@ -1,3 +1,4 @@
 import turtle
 import math
 
+screen = turtle.Screen()
