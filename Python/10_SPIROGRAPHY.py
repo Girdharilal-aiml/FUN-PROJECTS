@@ -25,3 +25,5 @@ for layer in range(8):
     
     t.penup()
     t.goto(R - r + d, 0)
+    t.pendown()
+    
