@@ -17,3 +17,4 @@ colors = ["#FFD700", "#FFA500", "#FFFF00", "#FFCC00"]
 
 # Base parameters
 R = 220
+r = 65
