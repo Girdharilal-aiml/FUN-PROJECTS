@@ -35,3 +35,4 @@ for layer in range(8):
         
         t.goto(x, y)
     
+    t.right(10) 
