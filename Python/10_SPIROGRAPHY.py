@@ -15,3 +15,4 @@ t.hideturtle()
 
 colors = ["#FFD700", "#FFA500", "#FFFF00", "#FFCC00"]
 
+# Base parameters
