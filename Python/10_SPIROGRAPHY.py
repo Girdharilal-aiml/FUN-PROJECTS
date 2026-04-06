@@ -28,3 +28,5 @@ for layer in range(8):
     t.pendown()
     
     for i in range(3000):  
+        angle = i * 0.03
+        
