@@ -21,3 +21,5 @@ r = 65
 d = 140
 
 for layer in range(8):  
+    t.color(colors[layer % len(colors)])
+    
