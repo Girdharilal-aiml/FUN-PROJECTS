@@ -8,3 +8,4 @@ screen.title("HEAVY Spirograph 🔥")
 
 screen.tracer(10) 
 
+t = turtle.Turtle()
