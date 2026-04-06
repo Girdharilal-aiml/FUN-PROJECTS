@@ -38,3 +38,4 @@ for layer in range(8):
     t.right(10) 
 
 screen.update()
+turtle.done()
