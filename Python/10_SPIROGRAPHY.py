@@ -13,3 +13,5 @@ t.speed(0)
 t.width(1)
 t.hideturtle()
 
+colors = ["#FFD700", "#FFA500", "#FFFF00", "#FFCC00"]
+
