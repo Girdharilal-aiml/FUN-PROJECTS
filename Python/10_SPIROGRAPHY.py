@@ -27,3 +27,4 @@ for layer in range(8):
     t.goto(R - r + d, 0)
     t.pendown()
     
+    for i in range(3000):  
