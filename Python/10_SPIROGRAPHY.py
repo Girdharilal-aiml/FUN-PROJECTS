@@ -33,3 +33,5 @@ for layer in range(8):
         x = (R - r) * math.cos(angle) + (d + layer*5) * math.cos((R - r) / r * angle)
         y = (R - r) * math.sin(angle) - (d + layer*5) * math.sin((R - r) / r * angle)
         
+        t.goto(x, y)
+    
