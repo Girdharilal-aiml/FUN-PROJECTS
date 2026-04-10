@@ -43,3 +43,15 @@ def main():
     t.hideturtle()
     t.speed(0)
     t.penup()
+    t.goto(0, -350)
+    t.left(90)
+    t.pendown()
+    grow(t, 120, 15, 25, 5)
+
+    print("Ink growth complete. Click to exit.")
+    screen.update()
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    turtle.colormode(255)
+    main()
