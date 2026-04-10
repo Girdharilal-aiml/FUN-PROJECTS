@@ -7,3 +7,5 @@ def setup_canvas():
     screen.setup(width=900, height=900)
     screen.title("Fluid Recursive Growth (Biological Ink)")
     screen.tracer(10)
+    return screen
+
