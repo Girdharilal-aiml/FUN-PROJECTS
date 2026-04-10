@@ -10,3 +10,4 @@ def setup_canvas():
     return screen
 
 def grow(t, length, thickness, angle, wind):
+    if length < 5:
