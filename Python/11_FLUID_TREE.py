@@ -20,3 +20,4 @@ def grow(t, length, thickness, angle, wind):
     t.pencolor(color_hex)
     t.forward(length)
     
+    new_length = length * random.uniform(0.7, 0.8)
