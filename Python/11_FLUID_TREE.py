@@ -25,3 +25,4 @@ def grow(t, length, thickness, angle, wind):
     pos = t.pos()
     head = t.heading()
 
+    t.right(angle + random.uniform(-10, 20) + wind)
