@@ -27,3 +27,4 @@ def grow(t, length, thickness, angle, wind):
 
     t.right(angle + random.uniform(-10, 20) + wind)
     grow(t, new_length, new_thickness, angle, wind)
+    t.penup()
