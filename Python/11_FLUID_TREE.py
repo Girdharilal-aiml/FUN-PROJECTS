@@ -29,3 +29,4 @@ def grow(t, length, thickness, angle, wind):
     grow(t, new_length, new_thickness, angle, wind)
     t.penup()
     t.goto(pos)
+    t.setheading(head)
