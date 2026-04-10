@@ -12,3 +12,5 @@ def setup_canvas():
 def grow(t, length, thickness, angle, wind):
     if length < 5:
         return
+    t.pensize(thickness)
+    
