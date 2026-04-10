@@ -36,3 +36,10 @@ def grow(t, length, thickness, angle, wind):
     t.penup()
     t.goto(pos)
     t.setheading(head)
+    t.pendown()  
+def main():
+    screen = setup_canvas()
+    t = turtle.Turtle()
+    t.hideturtle()
+    t.speed(0)
+    t.penup()
