@@ -14,3 +14,4 @@ def grow(t, length, thickness, angle, wind):
         return
     t.pensize(thickness)
     
+    color_val = int(255 - (thickness * 15))
