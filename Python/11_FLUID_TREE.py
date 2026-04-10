@@ -16,3 +16,4 @@ def grow(t, length, thickness, angle, wind):
     
     color_val = int(255 - (thickness * 15))
     color_val = max(min(color_val, 200), 20)
+    color_hex = f'#{color_val:02x}{color_val:02x}{color_val:02x}'
