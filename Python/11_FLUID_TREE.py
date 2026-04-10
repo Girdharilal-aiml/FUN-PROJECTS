@@ -6,3 +6,4 @@ def setup_canvas():
     screen.bgcolor("#F5F5F0") 
     screen.setup(width=900, height=900)
     screen.title("Fluid Recursive Growth (Biological Ink)")
+    screen.tracer(10)
