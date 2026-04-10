@@ -9,3 +9,4 @@ def setup_canvas():
     screen.tracer(10)
     return screen
 
+def grow(t, length, thickness, angle, wind):
