@@ -31,3 +31,4 @@ def draw_luminous_art():
         t.left(90)
         t.circle(i * 0.3, 90)
     
+        if i % 10 == 0:
