@@ -13,3 +13,5 @@ def draw_luminous_art():
     t.hideturtle()
     
     petals = 120
+    hue = 0.6
+    
