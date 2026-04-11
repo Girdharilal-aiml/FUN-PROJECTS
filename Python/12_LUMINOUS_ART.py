@@ -7,3 +7,4 @@ def draw_luminous_art():
     screen.title("Luminous Fractal Art")
     screen.setup(width=900, height=900)
     
+    t = turtle.Turtle()
