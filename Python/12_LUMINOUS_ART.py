@@ -27,3 +27,4 @@ def draw_luminous_art():
         t.forward(i * 0.8)
         t.right(45)
         t.circle(i * 0.3, 90)
+        t.width(i // 100 + 1)
