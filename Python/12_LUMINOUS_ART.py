@@ -16,3 +16,4 @@ def draw_luminous_art():
     hue = 0.6
     
     for i in range(400):
+        color = colorsys.hsv_to_rgb(hue, 0.9, 1)
