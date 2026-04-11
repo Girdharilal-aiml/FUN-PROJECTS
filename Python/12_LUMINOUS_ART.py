@@ -22,3 +22,4 @@ def draw_luminous_art():
     
         t.penup()
         t.goto(0, 0)
+        t.setheading(i * 15) 
