@@ -12,3 +12,4 @@ def draw_luminous_art():
     turtle.tracer(5)
     t.hideturtle()
     
+    petals = 120
