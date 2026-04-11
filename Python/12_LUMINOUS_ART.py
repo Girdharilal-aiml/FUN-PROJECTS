@@ -21,3 +21,4 @@ def draw_luminous_art():
         hue += 0.002
     
         t.penup()
+        t.goto(0, 0)
