@@ -24,3 +24,5 @@ def draw_luminous_art():
         t.goto(0, 0)
         t.setheading(i * 15) 
         t.pendown()
+        t.forward(i * 0.8)
+        t.right(45)
