@@ -8,3 +8,4 @@ def draw_luminous_art():
     screen.setup(width=900, height=900)
     
     t = turtle.Turtle()
+    t.speed(0)
