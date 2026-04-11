@@ -20,3 +20,4 @@ def draw_luminous_art():
         t.pencolor(color)
         hue += 0.002
     
+        t.penup()
