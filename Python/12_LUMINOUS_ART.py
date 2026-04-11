@@ -33,3 +33,12 @@ def draw_luminous_art():
     
         if i % 10 == 0:
             screen.update()
+    screen.update()
+    print("Masterpiece Complete! Click anywhere to exit.")
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    try:
+        draw_luminous_art()
+    except:
+        pass
