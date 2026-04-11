@@ -32,3 +32,4 @@ def draw_luminous_art():
         t.circle(i * 0.3, 90)
     
         if i % 10 == 0:
+            screen.update()
