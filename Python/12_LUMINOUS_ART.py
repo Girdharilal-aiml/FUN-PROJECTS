@@ -10,3 +10,5 @@ def draw_luminous_art():
     t = turtle.Turtle()
     t.speed(0)
     turtle.tracer(5)
+    t.hideturtle()
+    
