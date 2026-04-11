@@ -15,3 +15,4 @@ def draw_luminous_art():
     petals = 120
     hue = 0.6
     
+    for i in range(400):
