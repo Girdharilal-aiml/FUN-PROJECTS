@@ -18,3 +18,5 @@ def draw_luminous_art():
     for i in range(400):
         color = colorsys.hsv_to_rgb(hue, 0.9, 1)
         t.pencolor(color)
+        hue += 0.002
+    
