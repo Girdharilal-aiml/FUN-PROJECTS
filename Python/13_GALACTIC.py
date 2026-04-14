@@ -32,3 +32,5 @@ def draw_singularity():
     print("Masterpiece Complete!")
     screen.exitonclick()
 
+if __name__ == "__main__":
+    draw_singularity()
