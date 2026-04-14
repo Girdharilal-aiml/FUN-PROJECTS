@@ -13,3 +13,5 @@ def draw_singularity():
     t.hideturtle()
     
     n = 1000 
+    h = 10
+    
