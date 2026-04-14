@@ -8,3 +8,4 @@ def draw_singularity():
     screen.setup(width=1.0, height=1.0) 
     
     t = turtle.Turtle()
+    t.speed(11000)
