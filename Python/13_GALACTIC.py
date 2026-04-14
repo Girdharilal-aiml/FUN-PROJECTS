@@ -24,3 +24,4 @@ def draw_singularity():
         t.pendown()
         t.setheading(i * 135.5)
         t.forward(i)
+        t.left(60)
