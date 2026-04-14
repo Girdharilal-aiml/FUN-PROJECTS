@@ -21,3 +21,4 @@ def draw_singularity():
         h += 1/n
         t.penup()
         t.goto(0, 0)
+        t.pendown()
