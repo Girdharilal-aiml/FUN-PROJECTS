@@ -12,3 +12,4 @@ def draw_singularity():
     turtle.delay(0)
     t.hideturtle()
     
+    n = 1000 
