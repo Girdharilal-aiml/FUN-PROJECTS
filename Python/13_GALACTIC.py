@@ -9,3 +9,4 @@ def draw_singularity():
     
     t = turtle.Turtle()
     t.speed(11000)
+    turtle.delay(0)
