@@ -4,3 +4,4 @@ import math
 
 def draw_singularity():
     screen = turtle.Screen()
+    screen.bgcolor("black")
