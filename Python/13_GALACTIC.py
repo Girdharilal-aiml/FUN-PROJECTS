@@ -18,3 +18,4 @@ def draw_singularity():
     for i in range(n):
         color = colorsys.hsv_to_rgb(h, 0.9, 1)
         t.pencolor(color)
+        h += 1/n
