@@ -29,3 +29,4 @@ def draw_singularity():
         t.circle(i / 4, 90)
         t.width(i / 300)
 
+    print("Masterpiece Complete!")
