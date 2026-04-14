@@ -30,3 +30,5 @@ def draw_singularity():
         t.width(i / 300)
 
     print("Masterpiece Complete!")
+    screen.exitonclick()
+
