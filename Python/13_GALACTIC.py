@@ -26,3 +26,4 @@ def draw_singularity():
         t.forward(i)
         t.left(60)
         t.forward(i / 2)
+        t.circle(i / 4, 90)
