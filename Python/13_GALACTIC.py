@@ -16,3 +16,4 @@ def draw_singularity():
     h = 10
     
     for i in range(n):
+        color = colorsys.hsv_to_rgb(h, 0.9, 1)
