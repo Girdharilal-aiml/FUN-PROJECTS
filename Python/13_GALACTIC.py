@@ -27,3 +27,5 @@ def draw_singularity():
         t.left(60)
         t.forward(i / 2)
         t.circle(i / 4, 90)
+        t.width(i / 300)
+
