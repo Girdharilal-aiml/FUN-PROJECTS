@@ -15,3 +15,4 @@ def draw_singularity():
     n = 1000 
     h = 10
     
+    for i in range(n):
