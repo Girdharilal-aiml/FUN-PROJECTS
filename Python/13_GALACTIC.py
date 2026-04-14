@@ -20,3 +20,4 @@ def draw_singularity():
         t.pencolor(color)
         h += 1/n
         t.penup()
+        t.goto(0, 0)
