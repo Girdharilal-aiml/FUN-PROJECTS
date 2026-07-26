@@ -16,3 +16,5 @@ for i in range(300):
     
     t.left(5)
     t.width(2)
+
+turtle.done()
