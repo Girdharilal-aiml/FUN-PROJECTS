@@ -11,4 +11,6 @@ for i in range(300):
     color = colorsys.hsv_to_rgb(i/300, 1.0, 1.0)
     t.pencolor(color)
     for _ in range(4):
-     
+        t.forward(i)
+        t.left(90)
+ 
