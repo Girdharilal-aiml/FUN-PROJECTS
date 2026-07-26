@@ -13,4 +13,6 @@ for i in range(300):
     for _ in range(4):
         t.forward(i)
         t.left(90)
- 
+    
+    t.left(5)
+    t.width(2)
