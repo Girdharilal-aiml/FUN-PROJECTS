@@ -21,6 +21,7 @@ def draw_fractal(t, length, depth, hue):
 def main():
     screen = turtle.Screen()
     screen.setup(width=900, height=900)
+    screen.bgcolor("#000000")
     
 
     
