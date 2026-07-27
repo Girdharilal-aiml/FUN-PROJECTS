@@ -10,6 +10,7 @@ def draw_fractal(t, length, depth, hue):
     t.width(depth)
     t.forward(length)
     
+    for angle in [-45, 0, 45]:
 
     
 
