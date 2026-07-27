@@ -14,6 +14,7 @@ def draw_fractal(t, length, depth, hue):
         t.left(angle)
         draw_fractal(t, length * 0.6, depth - 1, hue + 0.1)
         t.right(angle)
+    t.penup()
 
     
 
