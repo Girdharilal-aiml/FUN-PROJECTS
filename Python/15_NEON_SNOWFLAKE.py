@@ -19,6 +19,7 @@ def draw_fractal(t, length, depth, hue):
     t.pendown()
 
 def main():
+    screen = turtle.Screen()
     
 
     
