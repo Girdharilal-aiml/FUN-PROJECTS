@@ -25,6 +25,7 @@ def main():
     screen.title("Fractal Neon Snowflake - Click to Exit")
     
     t = turtle.Turtle()
+    t.speed(0)
 
     
         
