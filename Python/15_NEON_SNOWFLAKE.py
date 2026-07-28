@@ -29,6 +29,7 @@ def main():
     t.hideturtle()
     turtle.tracer(5)
 
+    arms = 8
     
         
     
