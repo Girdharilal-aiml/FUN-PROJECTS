@@ -24,6 +24,7 @@ def main():
     screen.bgcolor("#000000")
     screen.title("Fractal Neon Snowflake - Click to Exit")
     
+    t = turtle.Turtle()
 
     
         
