@@ -34,5 +34,6 @@ def main():
     for i in range(arms):
         t.penup()
         t.goto(0, 0)
+        t.setheading(i * (360 / arms))
         
     
