@@ -44,3 +44,4 @@ def main():
     
     turtle.update()
     print("Fractal Crystal Stabilized. Click screen to exit.")
+    screen.exitonclick()
