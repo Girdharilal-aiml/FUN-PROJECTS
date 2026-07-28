@@ -32,5 +32,6 @@ def main():
     arms = 8
     
     for i in range(arms):
+        t.penup()
         
     
