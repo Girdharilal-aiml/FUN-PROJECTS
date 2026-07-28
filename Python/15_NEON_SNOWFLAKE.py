@@ -36,5 +36,6 @@ def main():
         t.goto(0, 0)
         t.setheading(i * (360 / arms))
         t.pendown()
+        draw_fractal(t, 150, 5, 0.6)
         
     
