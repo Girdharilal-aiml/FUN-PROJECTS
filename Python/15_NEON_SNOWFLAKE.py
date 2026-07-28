@@ -27,6 +27,7 @@ def main():
     t = turtle.Turtle()
     t.speed(0)
     t.hideturtle()
+    turtle.tracer(5)
 
     
         
