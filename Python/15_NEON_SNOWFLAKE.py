@@ -40,4 +40,5 @@ def main():
         
     t.penup()
     t.goto(0, 0)
+    t.dot(20, "white")
     
