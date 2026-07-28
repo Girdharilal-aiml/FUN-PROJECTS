@@ -43,3 +43,4 @@ def main():
     t.dot(20, "white")
     
     turtle.update()
+    print("Fractal Crystal Stabilized. Click screen to exit.")
