@@ -42,3 +42,4 @@ def main():
     t.goto(0, 0)
     t.dot(20, "white")
     
+    turtle.update()
