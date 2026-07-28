@@ -39,4 +39,5 @@ def main():
         draw_fractal(t, 150, 5, 0.6)
         
     t.penup()
+    t.goto(0, 0)
     
