@@ -45,3 +45,5 @@ def main():
     turtle.update()
     print("Fractal Crystal Stabilized. Click screen to exit.")
     screen.exitonclick()
+
+if __name__ == "__main__":
