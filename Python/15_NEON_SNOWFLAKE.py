@@ -22,7 +22,9 @@ def main():
     screen = turtle.Screen()
     screen.setup(width=900, height=900)
     screen.bgcolor("#000000")
+    screen.title("Fractal Neon Snowflake - Click to Exit")
     
 
     
- 
+        
+    
