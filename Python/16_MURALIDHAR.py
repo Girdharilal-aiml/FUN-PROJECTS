@@ -4,4 +4,5 @@ import math
 
 def draw_muralidhar_mandala():
     screen = turtle.Screen()
+    screen.bgcolor("#000814")
  
