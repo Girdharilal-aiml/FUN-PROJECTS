@@ -36,4 +36,5 @@ def draw_muralidhar_mandala():
         if i % 20 == 0:
             t.dot(5, "#FFD700")
 
+    t.width(2)
  
