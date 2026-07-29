@@ -10,6 +10,7 @@ def draw_muralidhar_mandala():
     screen.tracer(2)
     t = turtle.Turtle()
     t.speed(0)
+    t.width(1)
 
         
         
