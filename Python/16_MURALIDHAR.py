@@ -23,6 +23,7 @@ def draw_muralidhar_mandala():
         t.pencolor(color)
         
         angle = i * 137.508
+        dist = i * 0.8
         
         
 
