@@ -37,4 +37,5 @@ def draw_muralidhar_mandala():
             t.dot(5, "#FFD700")
 
     t.width(2)
+    for j in range(8):
  
