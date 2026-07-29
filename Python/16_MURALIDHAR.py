@@ -26,6 +26,7 @@ def draw_muralidhar_mandala():
         dist = i * 0.8
         
         t.penup()
+        t.goto(0, 0)
         
 
  
