@@ -22,6 +22,7 @@ def draw_muralidhar_mandala():
             color = colorsys.hsv_to_rgb(0.5 + (hue * 0.5), 0.9, 1)
         t.pencolor(color)
         
+        angle = i * 137.508
         
         
 
