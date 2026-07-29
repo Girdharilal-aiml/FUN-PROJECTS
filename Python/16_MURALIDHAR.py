@@ -40,4 +40,5 @@ def draw_muralidhar_mandala():
     for j in range(8):
         t.penup()
         t.goto(0, 0)
+        t.setheading(j * 45)
  
