@@ -33,5 +33,6 @@ def draw_muralidhar_mandala():
         arc_size = 20 + math.sin(i * 0.1) * 30
         t.circle(arc_size, 180)
         
+        if i % 20 == 0:
 
  
