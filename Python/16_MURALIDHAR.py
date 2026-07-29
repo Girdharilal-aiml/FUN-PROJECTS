@@ -34,5 +34,6 @@ def draw_muralidhar_mandala():
         t.circle(arc_size, 180)
         
         if i % 20 == 0:
+            t.dot(5, "#FFD700")
 
  
