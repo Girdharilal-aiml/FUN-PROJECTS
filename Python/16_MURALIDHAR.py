@@ -16,6 +16,8 @@ def draw_muralidhar_mandala():
     for i in range(iterations):
 
         hue = (i / iterations) * 0.7 
+        if i > 250:
+        else:
         
         
         
