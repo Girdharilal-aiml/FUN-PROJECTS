@@ -17,6 +17,7 @@ def draw_muralidhar_mandala():
 
         hue = (i / iterations) * 0.7 
         if i > 250:
+            color = colorsys.hsv_to_rgb(0.12, 0.8, 1)
         else:
         
         
