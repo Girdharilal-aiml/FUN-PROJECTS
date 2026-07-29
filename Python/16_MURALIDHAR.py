@@ -12,6 +12,7 @@ def draw_muralidhar_mandala():
     t.speed(0)
     t.width(1)
     t.hideturtle()
+    iterations = 360
 
         
         
