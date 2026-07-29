@@ -27,6 +27,7 @@ def draw_muralidhar_mandala():
         
         t.penup()
         t.goto(0, 0)
+        t.setheading(angle)
         
 
  
