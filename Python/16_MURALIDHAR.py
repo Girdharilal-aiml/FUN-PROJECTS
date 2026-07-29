@@ -25,6 +25,7 @@ def draw_muralidhar_mandala():
         angle = i * 137.508
         dist = i * 0.8
         
+        t.penup()
         
 
  
