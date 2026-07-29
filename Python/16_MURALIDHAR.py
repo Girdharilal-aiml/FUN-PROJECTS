@@ -11,6 +11,7 @@ def draw_muralidhar_mandala():
     t = turtle.Turtle()
     t.speed(0)
     t.width(1)
+    t.hideturtle()
 
         
         
