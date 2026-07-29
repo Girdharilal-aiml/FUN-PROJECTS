@@ -20,6 +20,7 @@ def draw_muralidhar_mandala():
             color = colorsys.hsv_to_rgb(0.12, 0.8, 1)
         else:
             color = colorsys.hsv_to_rgb(0.5 + (hue * 0.5), 0.9, 1)
+        t.pencolor(color)
         
         
         
