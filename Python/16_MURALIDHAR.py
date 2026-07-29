@@ -38,4 +38,5 @@ def draw_muralidhar_mandala():
 
     t.width(2)
     for j in range(8):
+        t.penup()
  
