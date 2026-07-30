@@ -61,4 +61,5 @@ def draw_muralidhar_mandala():
         
     screen.update()
     print("Muralidhar Mandala complete. Click to exit.")
+    screen.exitonclick()
 
