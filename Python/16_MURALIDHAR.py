@@ -60,4 +60,5 @@ def draw_muralidhar_mandala():
         t.circle(15, steps=3) 
         
     screen.update()
+    print("Muralidhar Mandala complete. Click to exit.")
 
