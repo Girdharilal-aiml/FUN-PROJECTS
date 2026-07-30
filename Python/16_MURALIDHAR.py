@@ -44,4 +44,7 @@ def draw_muralidhar_mandala():
         t.pencolor("#FFD700")
         for k in range(10):
             t.pendown()
- 
+            t.forward(30)
+        
+        
+
