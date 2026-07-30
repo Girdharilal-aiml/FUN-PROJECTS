@@ -64,3 +64,5 @@ def draw_muralidhar_mandala():
     screen.exitonclick()
 
 if __name__ == "__main__":
+    try:
+        pass
