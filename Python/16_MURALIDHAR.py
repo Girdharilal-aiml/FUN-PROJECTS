@@ -57,5 +57,6 @@ def draw_muralidhar_mandala():
         
         color = colorsys.hsv_to_rgb(0.5 + (math.sin(m)*0.1), 0.8, 1)
         t.pencolor(color)
+        t.circle(15, steps=3) 
         
 
