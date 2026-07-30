@@ -59,4 +59,5 @@ def draw_muralidhar_mandala():
         t.pencolor(color)
         t.circle(15, steps=3) 
         
+    screen.update()
 
