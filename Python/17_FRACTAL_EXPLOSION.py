@@ -4,3 +4,4 @@ import colorsys
 
 screen = turtle.Screen()
 screen.bgcolor("black")
+screen.title("ULTRA FRACTAL EXPLOSION")
