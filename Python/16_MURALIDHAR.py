@@ -50,6 +50,7 @@ def draw_muralidhar_mandala():
             t.dot(8, "#B22222")
     t.penup()
     for m in range(72):
+        t.goto(0, 0)
         
         
 
