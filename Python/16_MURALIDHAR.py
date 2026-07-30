@@ -63,3 +63,4 @@ def draw_muralidhar_mandala():
     print("Muralidhar Mandala complete. Click to exit.")
     screen.exitonclick()
 
+if __name__ == "__main__":
