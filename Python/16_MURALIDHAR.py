@@ -45,6 +45,7 @@ def draw_muralidhar_mandala():
         for k in range(10):
             t.pendown()
             t.forward(30)
+            t.penup()
         
         
 
