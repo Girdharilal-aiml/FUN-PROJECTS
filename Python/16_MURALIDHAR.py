@@ -53,6 +53,7 @@ def draw_muralidhar_mandala():
         t.goto(0, 0)
         t.setheading(m * 5)
         t.forward(350)
+        t.pendown()
         
         
 
