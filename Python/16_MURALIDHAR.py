@@ -47,6 +47,7 @@ def draw_muralidhar_mandala():
             t.forward(30)
             t.penup()
             t.forward(10)
+            t.dot(8, "#B22222")
         
         
 
