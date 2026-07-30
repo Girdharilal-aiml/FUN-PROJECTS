@@ -65,4 +65,5 @@ def draw_muralidhar_mandala():
 
 if __name__ == "__main__":
     try:
+        draw_muralidhar_mandala()
         pass
