@@ -22,3 +22,4 @@ def draw_fractal(x, y, angle, depth, length):
     t.pendown()
     color = colorsys.hsv_to_rgb(hue % 1, 1, 1)
     t.pencolor(color)
+    hue += 0.002
