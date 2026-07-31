@@ -25,3 +25,5 @@ def draw_fractal(x, y, angle, depth, length):
     hue += 0.002
 
     t.forward(length)
+
+    new_x, new_y = t.position()
