@@ -36,3 +36,4 @@ for i in range(12):
 
 screen.update()
 t.hideturtle()
+turtle.done()
