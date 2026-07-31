@@ -27,3 +27,4 @@ def draw_fractal(x, y, angle, depth, length):
     t.forward(length)
 
     new_x, new_y = t.position()
+    for a in [-45, -20, 0, 20, 45]:
