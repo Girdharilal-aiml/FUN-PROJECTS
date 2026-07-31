@@ -29,3 +29,6 @@ def draw_fractal(x, y, angle, depth, length):
     new_x, new_y = t.position()
     for a in [-45, -20, 0, 20, 45]:
         draw_fractal(new_x, new_y, angle + a, depth - 1, length * 0.75)
+
+# MULTI-SYMMETRY (ULTRA EFFECT)
+for i in range(12):
