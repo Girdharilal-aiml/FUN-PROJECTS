@@ -33,3 +33,5 @@ def draw_fractal(x, y, angle, depth, length):
 # MULTI-SYMMETRY (ULTRA EFFECT)
 for i in range(12):
     draw_fractal(0, 0, i * 30, 6, 120)
+
+screen.update()
