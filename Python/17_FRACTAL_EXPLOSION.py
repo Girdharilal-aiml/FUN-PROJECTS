@@ -19,3 +19,4 @@ def draw_fractal(x, y, angle, depth, length):
     t.penup()
     t.goto(x, y)
     t.setheading(angle)
+    t.pendown()
