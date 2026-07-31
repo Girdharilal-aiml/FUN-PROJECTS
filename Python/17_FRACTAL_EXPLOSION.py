@@ -11,3 +11,4 @@ t.speed(0)
 t.width(1)
 
 hue = 0
+def draw_fractal(x, y, angle, depth, length):
