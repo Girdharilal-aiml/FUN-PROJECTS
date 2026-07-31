@@ -15,3 +15,4 @@ def draw_fractal(x, y, angle, depth, length):
     global hue
     
     if depth == 0:
+        return
