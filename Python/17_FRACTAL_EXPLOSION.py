@@ -16,3 +16,4 @@ def draw_fractal(x, y, angle, depth, length):
     
     if depth == 0:
         return
+    t.penup()
