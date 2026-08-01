@@ -24,3 +24,4 @@ def draw_butterfly_fractal():
     screen.exitonclick()
 
 if __name__ == "__main__":
+    draw_butterfly_fractal()
