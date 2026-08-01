@@ -8,3 +8,4 @@ def draw_butterfly_fractal():
     
     t = turtle.Turtle()
     t.speed(0)
+    t.hideturtle()
