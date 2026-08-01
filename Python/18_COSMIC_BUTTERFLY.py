@@ -15,3 +15,4 @@ def draw_butterfly_fractal():
         color = colorsys.hsv_to_rgb(i/400, 0.9, 1.0)
         t.pencolor(color)
         t.circle(i, 90)
+        t.left(91)
