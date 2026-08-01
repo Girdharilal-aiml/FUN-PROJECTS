@@ -16,3 +16,4 @@ def draw_butterfly_fractal():
         t.pencolor(color)
         t.circle(i, 90)
         t.left(91)
+        t.circle(i, 90)
