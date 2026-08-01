@@ -10,3 +10,5 @@ def draw_butterfly_fractal():
     t.speed(0)
     t.hideturtle()
     turtle.tracer(2,0)
+
+    for i in range(400):
