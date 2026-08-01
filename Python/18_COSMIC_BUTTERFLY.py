@@ -21,3 +21,4 @@ def draw_butterfly_fractal():
         t.width(i/150 + 1)
             
     print("Cosmic Butterfly")
+    screen.exitonclick()
