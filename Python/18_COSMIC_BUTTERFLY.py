@@ -7,3 +7,4 @@ def draw_butterfly_fractal():
     screen.title("Cosmic Butterfly")
     
     t = turtle.Turtle()
+    t.speed(0)
