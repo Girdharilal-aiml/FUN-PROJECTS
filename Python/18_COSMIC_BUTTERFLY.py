@@ -12,3 +12,4 @@ def draw_butterfly_fractal():
     turtle.tracer(2,0)
 
     for i in range(400):
+        color = colorsys.hsv_to_rgb(i/400, 0.9, 1.0)
