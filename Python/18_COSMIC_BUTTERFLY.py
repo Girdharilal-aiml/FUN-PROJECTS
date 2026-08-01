@@ -17,3 +17,4 @@ def draw_butterfly_fractal():
         t.circle(i, 90)
         t.left(91)
         t.circle(i, 90)
+        t.left(181)
