@@ -22,3 +22,5 @@ def draw_butterfly_fractal():
             
     print("Cosmic Butterfly")
     screen.exitonclick()
+
+if __name__ == "__main__":
