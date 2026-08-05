@@ -13,3 +13,5 @@ def draw_satisfying_pattern():
     for i in range(60):
         t.circle(100) 
         t.left(6)    
+        
+    t.hideturtle()
