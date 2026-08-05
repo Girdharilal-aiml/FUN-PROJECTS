@@ -7,3 +7,4 @@ def draw_satisfying_pattern():
     screen.title("Simple & Satisfying Art")
     
     t = turtle.Turtle()
+    t.speed(0)
