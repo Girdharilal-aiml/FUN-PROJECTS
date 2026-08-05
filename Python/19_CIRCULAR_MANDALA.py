@@ -16,3 +16,4 @@ def draw_satisfying_pattern():
         
     t.hideturtle()
     print("Done! Click on the window to close.")
+    screen.exitonclick()
