@@ -10,3 +10,4 @@ def draw_satisfying_pattern():
     t.speed(0)
     t.width(1)
     t.pencolor("#00f2ff")
+    for i in range(60):
