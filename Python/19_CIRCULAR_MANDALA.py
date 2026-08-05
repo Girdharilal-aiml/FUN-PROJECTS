@@ -6,3 +6,4 @@ def draw_satisfying_pattern():
     screen.bgcolor("#000000")
     screen.title("Simple & Satisfying Art")
     
+    t = turtle.Turtle()
