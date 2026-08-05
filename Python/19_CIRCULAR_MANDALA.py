@@ -19,3 +19,4 @@ def draw_satisfying_pattern():
     screen.exitonclick()
 
 if __name__ == "__main__":
+    draw_satisfying_pattern()
