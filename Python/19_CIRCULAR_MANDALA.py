@@ -9,3 +9,4 @@ def draw_satisfying_pattern():
     t = turtle.Turtle()
     t.speed(0)
     t.width(1)
+    t.pencolor("#00f2ff")
