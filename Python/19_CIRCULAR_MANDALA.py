@@ -11,3 +11,4 @@ def draw_satisfying_pattern():
     t.width(1)
     t.pencolor("#00f2ff")
     for i in range(60):
+        t.circle(100) 
