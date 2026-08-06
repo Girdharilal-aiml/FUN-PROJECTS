@@ -8,3 +8,4 @@ def draw_digital_bmw():
     screen.title("BMW")
     screen.tracer(1)
     t = turtle.Turtle()
+    t.hideturtle()
