@@ -7,3 +7,4 @@ def draw_digital_bmw():
     screen.bgcolor("#050505")
     screen.title("BMW")
     screen.tracer(1)
+    t = turtle.Turtle()
