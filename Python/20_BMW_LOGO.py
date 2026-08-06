@@ -9,3 +9,4 @@ def draw_digital_bmw():
     screen.tracer(1)
     t = turtle.Turtle()
     t.hideturtle()
+    t.speed(0)
