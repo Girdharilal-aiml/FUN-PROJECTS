@@ -10,3 +10,11 @@ def draw_digital_bmw():
     t = turtle.Turtle()
     t.hideturtle()
     t.speed(0)
+
+    COLORS = {
+        "blue": "#0066AD",
+        "white": "#FFFFFF",
+        "chrome": "#E0E0E0",
+        "grid": "#222222"
+    }
+ 
