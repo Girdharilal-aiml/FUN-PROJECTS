@@ -17,4 +17,8 @@ def draw_digital_bmw():
         "chrome": "#E0E0E0",
         "grid": "#222222"
     }
- 
+        
+    def draw_tech_ring(radius, width, color, segments=120):
+        t.penup()
+        t.pencolor(color)
+    
