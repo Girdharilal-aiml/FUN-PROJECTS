@@ -21,4 +21,7 @@ def draw_digital_bmw():
     def draw_tech_ring(radius, width, color, segments=120):
         t.penup()
         t.pencolor(color)
-    
+        t.width(width)
+        for i in range(segments + 1):
+            angle = (i / segments) * 360
+     
