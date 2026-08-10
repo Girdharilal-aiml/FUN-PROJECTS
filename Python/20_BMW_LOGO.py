@@ -24,4 +24,7 @@ def draw_digital_bmw():
         t.width(width)
         for i in range(segments + 1):
             angle = (i / segments) * 360
-     
+            rad = math.radians(angle)
+            x = radius * math.cos(rad)
+            y = radius * math.sin(rad)
+    
