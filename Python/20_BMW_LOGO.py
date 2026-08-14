@@ -27,4 +27,11 @@ def draw_digital_bmw():
             rad = math.radians(angle)
             x = radius * math.cos(rad)
             y = radius * math.sin(rad)
+            if i == 0:
+                t.goto(x, y)
+                t.pendown()
+            else:
+                t.goto(x, y)
+    t.width(1)
+    t.pencolor(COLORS["grid"])
     
