@@ -34,4 +34,9 @@ def draw_digital_bmw():
                 t.goto(x, y)
     t.width(1)
     t.pencolor(COLORS["grid"])
-    
+    for i in range(-400, 401, 40):
+        t.penup(); t.goto(i, -400); t.pendown(); t.goto(i, 400)
+        t.penup(); t.goto(-400, i); t.pendown(); t.goto(400, i)
+
+    for r in range(200, 215, 3):
+        draw_tech_ring(r, 1, COLORS["chrome"])
