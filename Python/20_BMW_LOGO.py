@@ -40,3 +40,12 @@ def draw_digital_bmw():
 
     for r in range(200, 215, 3):
         draw_tech_ring(r, 1, COLORS["chrome"])
+
+    line_spacing = 4
+    quad_r = 140
+    for i in range(4):
+        start_angle = i * 90
+        color = COLORS["white"] if i % 2 == 0 else COLORS["blue"]
+        t.pencolor(color)
+        t.width(2)
+        
