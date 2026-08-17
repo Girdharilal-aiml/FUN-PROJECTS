@@ -49,3 +49,10 @@ def draw_digital_bmw():
         t.pencolor(color)
         t.width(2)
         
+        for step in range(0, 91, 1):
+            angle = math.radians(start_angle + step)
+            t.penup()
+            t.goto(0, 0)
+            t.pendown()
+            t.goto(quad_r * math.cos(angle), quad_r * math.sin(angle))
+        screen.update()
