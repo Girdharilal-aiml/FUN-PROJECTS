@@ -56,3 +56,10 @@ def draw_digital_bmw():
             t.pendown()
             t.goto(quad_r * math.cos(angle), quad_r * math.sin(angle))
         screen.update()
+
+    letters = [("B", 130), ("M", 90), ("W", 50)]
+    for char, angle in letters:
+        rad = math.radians(angle)
+        x = 172 * math.cos(rad)
+        y = 172 * math.sin(rad)
+        
