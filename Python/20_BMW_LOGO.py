@@ -63,3 +63,10 @@ def draw_digital_bmw():
         x = 172 * math.cos(rad)
         y = 172 * math.sin(rad)
         
+        for offset in range(3, 0, -1):
+            t.penup()
+            t.goto(x, y - 25)
+            alpha = 1 - (offset / 4)
+            t.pencolor((alpha, alpha, alpha)) 
+            t.write(char, align="center", font=("Courier", 45, "bold"))
+    
