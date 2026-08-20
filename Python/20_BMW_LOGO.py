@@ -70,3 +70,5 @@ def draw_digital_bmw():
             t.pencolor((alpha, alpha, alpha)) 
             t.write(char, align="center", font=("Courier", 45, "bold"))
     draw_tech_ring(140, 5, COLORS["chrome"])
+
+    screen.update()
