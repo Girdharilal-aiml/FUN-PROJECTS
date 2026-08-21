@@ -72,3 +72,4 @@ def draw_digital_bmw():
     draw_tech_ring(140, 5, COLORS["chrome"])
 
     screen.update()
+    print("Digital BMW Loop Complete.")
