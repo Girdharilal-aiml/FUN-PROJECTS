@@ -76,3 +76,4 @@ def draw_digital_bmw():
     screen.mainloop()
 
 if __name__ == "__main__":
+    draw_digital_bmw()
