@@ -74,3 +74,5 @@ def draw_digital_bmw():
     screen.update()
     print("Digital BMW Loop Complete.")
     screen.mainloop()
+
+if __name__ == "__main__":
