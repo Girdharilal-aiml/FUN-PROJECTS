@@ -73,3 +73,4 @@ def draw_digital_bmw():
 
     screen.update()
     print("Digital BMW Loop Complete.")
+    screen.mainloop()
