@@ -43,4 +43,11 @@
             slices: 13
         };
 
-     
+        let width, height;
+        const canvas = document.getElementById('kaleidoscope');
+        const context = canvas.getContext('2d');
+        const bufferCanvas = document.createElement('canvas');
+        const bufferContext = bufferCanvas.getContext('2d');
+        window.addEventListener('resize', resize);
+        resize();
+
