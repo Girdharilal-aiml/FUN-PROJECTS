@@ -82,4 +82,8 @@
                 size: settings.size
             });
 
-           
+            for (let i = 0; i < settings.iterations; i++) {
+                for (let j = points.length - 1; j >= 0; j--) {
+                    drawShape(points.pop());
+                }
+            }
