@@ -75,4 +75,11 @@
             bufferContext.lineTo(0, -settings.size * settings.scale);
             bufferContext.stroke();
 
-         
+            drawShape({
+                x: 0, 
+                y: -settings.size * settings.scale, 
+                angle: -Math.PI * 0.5, 
+                size: settings.size
+            });
+
+           
