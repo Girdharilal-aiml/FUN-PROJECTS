@@ -65,5 +65,14 @@
                 settings.angle += 0.02 * settings.speed;
             }
 
-          
+            const points = [];
+            bufferContext.save();
+            bufferContext.setTransform(1, 0, 0, 1, 0, 0);
+            bufferContext.clearRect(0, 0, width, height);
+            bufferContext.restore();
+            bufferContext.beginPath();
+            bufferContext.moveTo(0, 0);
+            bufferContext.lineTo(0, -settings.size * settings.scale);
+            bufferContext.stroke();
+
          
