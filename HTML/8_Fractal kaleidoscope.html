@@ -51,3 +51,9 @@
         window.addEventListener('resize', resize);
         resize();
 
+        function resize() {
+            width = bufferCanvas.width = canvas.width = window.innerWidth;
+            height = bufferCanvas.height = canvas.height = window.innerHeight;
+            bufferContext.translate(width * 0.5, height);
+            bufferContext.strokeStyle = '#c3c3c3';
+        }
