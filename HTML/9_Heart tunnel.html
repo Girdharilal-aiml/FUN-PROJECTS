@@ -61,6 +61,31 @@
     <div class="warp-prompt"></div>
 
     <script>
-           </script>
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        const tunnelDepth = 2000;
+        scene.fog = new THREE.Fog(0x010004, 100, tunnelDepth * 0.85);
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, tunnelDepth + 500);
+        camera.position.set(0, 0, 50);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        container.appendChild(renderer.domElement);
+        const points = [];
+        const resolution = 150;
+        for (let i = 0; i <= Math.PI * 2; i += (Math.PI * 2) / resolution) {
+            const x = 16 * Math.pow(Math.sin(i), 3);
+            const y = 13 * Math.cos(i) - 5 * Math.cos(2 * i) - 2 * Math.cos(3 * i) - Math.cos(4 * i);
+            points.push(new THREE.Vector3(x, y, 0));
+        }
+        points.push(points[0]);
+        const heartGeometry = new THREE.BufferGeometry().setFromPoints(points);
+        const ringCount = 180;
+        const rings = [];
+        const colorPink = new THREE.Color(0xff0055);
+        const colorCyan = new THREE.Color(0x00f0ff);
+        const colorPurple = new THREE.Color(0x7b2cbf);
+
+    </script>
 </body>
 </html>
