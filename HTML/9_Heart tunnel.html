@@ -86,6 +86,26 @@
         const colorCyan = new THREE.Color(0x00f0ff);
         const colorPurple = new THREE.Color(0x7b2cbf);
 
+        for (let i = 0; i < ringCount; i++) {
+            const material = new THREE.LineBasicMaterial({
+                color: 0xffffff,
+                transparent: true,
+                opacity: 0.85,
+                blending: THREE.AdditiveBlending,
+                linewidth: 2
+            });
+
+            const ring = new THREE.Line(heartGeometry, material);
+            ring.position.z = - (i / ringCount) * tunnelDepth;
+            ring.userData = { 
+                index: i,
+                baseScale: 1.2 + (Math.random() * 0.2)
+            };
+            scene.add(ring);
+            rings.push(ring);
+        }
+
+        
     </script>
 </body>
 </html>
