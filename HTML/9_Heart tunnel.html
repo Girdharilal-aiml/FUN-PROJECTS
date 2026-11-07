@@ -105,7 +105,25 @@
             rings.push(ring);
         }
 
-        
+        const starCount = 1000;
+        const starGeo = new THREE.BufferGeometry();
+        const starPos = [];
+        for(let i=0; i<starCount; i++) {
+            starPos.push(
+                (Math.random() - 0.5) * 400,
+                (Math.random() - 0.5) * 400, 
+                -(Math.random() * tunnelDepth)
+            );
+        }
+        starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starPos, 3));
+        const starMat = new THREE.PointsMaterial({
+            color: 0xffffff,
+            size: 1.5,
+            transparent: true,
+            opacity: 0.6,
+            blending: THREE.AdditiveBlending
+        });
+       
     </script>
 </body>
 </html>
