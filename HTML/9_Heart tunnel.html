@@ -135,7 +135,31 @@
         const windowHalfX = window.innerWidth / 2;
         const windowHalfY = window.innerHeight / 2;
         const clock = new THREE.Clock();
-   
+        window.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - windowHalfX) * 0.05;
+            mouseY = (e.clientY - windowHalfY) * 0.05;
+        });
+        window.addEventListener('mousedown', () => {
+            targetSpeed = 35.0;
+            targetFov = 110;
+        });
+        window.addEventListener('mouseup', () => {
+            targetSpeed = 3.0;
+            targetFov = 60;
+        });
+        window.addEventListener('touchstart', (e) => {
+            if(e.touches.length > 0) {
+                mouseX = (e.touches[0].clientX - windowHalfX) * 0.05;
+                mouseY = (e.touches[0].clientY - windowHalfY) * 0.05;
+                targetSpeed = 35.0;
+                targetFov = 110;
+            }
+        });
+        window.addEventListener('touchend', () => {
+            targetSpeed = 3.0;
+            targetFov = 60;
+        });
+
         
     </script>
 </body>
