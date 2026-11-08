@@ -123,7 +123,20 @@
             opacity: 0.6,
             blending: THREE.AdditiveBlending
         });
-       
+        const starSystem = new THREE.Points(starGeo, starMat);
+        scene.add(starSystem);
+        let speed = 3.0;
+        let targetSpeed = 3.0;
+        let targetFov = 60;
+        let mouseX = 0;
+        let mouseY = 0;
+        let targetCameraX = 0;
+        let targetCameraY = 0;
+        const windowHalfX = window.innerWidth / 2;
+        const windowHalfY = window.innerHeight / 2;
+        const clock = new THREE.Clock();
+   
+        
     </script>
 </body>
 </html>
