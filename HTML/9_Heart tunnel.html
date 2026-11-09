@@ -209,7 +209,20 @@
                 }
             });
 
-        
+            const positions = starSystem.geometry.attributes.position.array;
+            for(let i = 0; i < starCount * 3; i += 3) {
+                positions[i + 2] += speed * 1.5;
+                if(positions[i + 2] > 50) {
+                    positions[i + 2] -= tunnelDepth;
+                    positions[i] = (Math.random() - 0.5) * 400;     
+                    positions[i + 1] = (Math.random() - 0.5) * 400; 
+                }
+            }
+            starSystem.geometry.attributes.position.needsUpdate = true;
+            starSystem.rotation.z = Math.sin(elapsedTime * 0.2) * 0.2;
+            renderer.render(scene, camera);
+        }
+        animate();
     </script>
 </body>
 </html>
