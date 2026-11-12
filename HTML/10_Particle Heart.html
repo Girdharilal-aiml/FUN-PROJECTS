@@ -33,6 +33,39 @@
 <body>
     <div id="canvas-container"></div>
     <script>
+        let scene, camera, renderer;
+        let heartParticles, ambientParticles, spiralParticles;
+        let originalPositions = [], scatteredPositions = [];
+        let particleVelocities = [], particleColors = [];
+        const HEART_PARTICLE_COUNT = 38000;
+        const AMBIENT_PARTICLE_COUNT = 500;
+        const SPIRAL_PARTICLE_COUNT = 40500;
+        let mouse = new THREE.Vector2(-9999, -9999);
+        let raycaster = new THREE.Raycaster();
+        let isMouseDown = false;
+        let previousMousePosition = { x: 0, y: 0 };
+        let targetRotation = { x: 0, y: 0 };
+        let currentRotation = { x: 0, y: 0 };
+        let clock = new THREE.Clock();
+        let heartGroup = new THREE.Group();
+        const ASSEMBLY_DURATION = 9.0;
+        function createParticleTexture() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 64;
+            canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+            const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+            gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+            gradient.addColorStop(0.18, 'rgba(255, 60, 140, 0.95)');
+            gradient.addColorStop(0.45, 'rgba(220, 0, 75, 0.45)');
+            gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(32, 32, 32, 0, Math.PI * 2);
+            ctx.fill();
+            return new THREE.CanvasTexture(canvas);
+        }
+
 
     </script>
 </body>
