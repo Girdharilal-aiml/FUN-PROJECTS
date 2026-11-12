@@ -66,6 +66,27 @@
             return new THREE.CanvasTexture(canvas);
         }
 
+        function sampleHeartVolume() {
+            let found = false;
+            let x, y, z;
+            
+            while (!found) {
+                x = (Math.random() * 2 - 1) * 1.5;
+                y = (Math.random() * 2 - 1) * 1.5;
+                z = (Math.random() * 2 - 1) * 1.5;
+                const x2 = x * x;
+                const y2 = y * y;
+                const z2 = z * z;
+                const term1 = x2 + 2.25 * z2 + y2 - 1;
+                const formula = (term1 * term1 * term1) - (x2 * y2 * y) - (0.1125 * z2 * y2 * y);
+                if (formula <= 0) {
+                    found = true;
+                }
+            }
+            
+            const scale = 3.2;
+            return new THREE.Vector3(x * scale, y * scale, z * scale);
+        }
 
     </script>
 </body>
