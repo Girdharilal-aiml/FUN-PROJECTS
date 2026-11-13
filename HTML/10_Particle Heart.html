@@ -108,7 +108,36 @@
             const colors = new Float32Array(HEART_PARTICLE_COUNT * 3);
             const sizes = new Float32Array(HEART_PARTICLE_COUNT);
             const particleTexture = createParticleTexture();
-            
+            for (let i = 0; i < HEART_PARTICLE_COUNT; i++) {
+                const heartPos = sampleHeartVolume();
+                originalPositions.push(heartPos.x, heartPos.y, heartPos.z);
+                const radius = 18 + Math.random() * 30;
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.acos(Math.random() * 2 - 1);
+                const scX = radius * Math.sin(phi) * Math.cos(theta);
+                const scY = radius * Math.sin(phi) * Math.sin(theta);
+                const scZ = radius * Math.cos(phi);
+                scatteredPositions.push(scX, scY, scZ);
+                positions[i * 3] = scX;
+                positions[i * 3 + 1] = scY;
+                positions[i * 3 + 2] = scZ;
+                const distFromCenter = heartPos.length();
+                const color = new THREE.Color();
+                
+                if (distFromCenter < 1.4) {
+                    color.setHSL(0.95 + Math.random() * 0.05, 1.0, 0.65);
+                } else if (distFromCenter < 2.7) {
+                    color.setHSL(0.90 + Math.random() * 0.08, 0.95, 0.55);
+                } else {
+                    color.setHSL(0.82 + Math.random() * 0.12, 0.92, 0.62);
+                }
+
+                colors[i * 3] = color.r;
+                colors[i * 3 + 1] = color.g;
+                colors[i * 3 + 2] = color.b;
+                sizes[i] = (Math.random() * 0.20 + 0.08);
+            }
+
            
         }
 
