@@ -102,7 +102,16 @@
             scene.add(heartGroup);
         }
 
-       
+        function initHeartParticles() {
+            const geometry = new THREE.BufferGeometry();
+            const positions = new Float32Array(HEART_PARTICLE_COUNT * 3);
+            const colors = new Float32Array(HEART_PARTICLE_COUNT * 3);
+            const sizes = new Float32Array(HEART_PARTICLE_COUNT);
+            const particleTexture = createParticleTexture();
+            
+           
+        }
+
     </script>
 </body>
 </html>
