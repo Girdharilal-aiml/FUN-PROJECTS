@@ -173,6 +173,17 @@
                 ambCols[i * 3 + 2] = c.b;
             }
 
+            ambGeo.setAttribute('position', new THREE.BufferAttribute(ambPos, 3));
+            ambGeo.setAttribute('color', new THREE.BufferAttribute(ambCols, 3));
+            const ambMat = new THREE.PointsMaterial({
+                size: 0.13,
+                vertexColors: true,
+                map: createParticleTexture(),
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                opacity: 0.45
+            });
+
            
 
            
