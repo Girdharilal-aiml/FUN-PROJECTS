@@ -184,7 +184,23 @@
                 opacity: 0.45
             });
 
-           
+            ambientParticles = new THREE.Points(ambGeo, ambMat);
+            scene.add(ambientParticles);
+            const spiralGeo = new THREE.BufferGeometry();
+            const spiralPos = new Float32Array(SPIRAL_PARTICLE_COUNT * 3);
+            const spiralCols = new Float32Array(SPIRAL_PARTICLE_COUNT * 3);
+            for (let i = 0; i < SPIRAL_PARTICLE_COUNT; i++) {
+                const t = (i / SPIRAL_PARTICLE_COUNT) * Math.PI * 14;
+                const radius = 2.2 + (i / SPIRAL_PARTICLE_COUNT) * 5.0;
+                spiralPos[i * 3] = Math.cos(t) * radius + (Math.random() - 0.5) * 0.5;
+                spiralPos[i * 3 + 1] = (i / SPIRAL_PARTICLE_COUNT - 0.5) * 9.0 + (Math.random() - 0.5) * 0.5;
+                spiralPos[i * 3 + 2] = Math.sin(t) * radius + (Math.random() - 0.5) * 0.5;
+                const col = new THREE.Color();
+                col.setHSL(0.88 + (i / SPIRAL_PARTICLE_COUNT) * 0.2, 1.0, 0.6);
+                spiralCols[i * 3] = col.r;
+                spiralCols[i * 3 + 1] = col.g;
+                spiralCols[i * 3 + 2] = col.b;
+            }
 
            
         }
