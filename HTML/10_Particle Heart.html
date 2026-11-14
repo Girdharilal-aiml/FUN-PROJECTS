@@ -202,7 +202,19 @@
                 spiralCols[i * 3 + 2] = col.b;
             }
 
-           
+            spiralGeo.setAttribute('position', new THREE.BufferAttribute(spiralPos, 3));
+            spiralGeo.setAttribute('color', new THREE.BufferAttribute(spiralCols, 3));
+            const spiralMat = new THREE.PointsMaterial({
+                size: 0.18,
+                vertexColors: true,
+                map: createParticleTexture(),
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                opacity: 0.65
+            });
+
+            spiralParticles = new THREE.Points(spiralGeo, spiralMat);
+            heartGroup.add(spiralParticles);
         }
 
     </script>
