@@ -217,6 +217,155 @@
             heartGroup.add(spiralParticles);
         }
 
+        function initInteractions() {
+            window.addEventListener('resize', onWindowResize);
+            window.addEventListener('pointermove', (event) => {
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+                if (isMouseDown) {
+                    const deltaX = event.clientX - previousMousePosition.x;
+                    const deltaY = event.clientY - previousMousePosition.y;
+                    targetRotation.y += deltaX * 0.005;
+                    targetRotation.x += deltaY * 0.005;
+                }
+
+                previousMousePosition = { x: event.clientX, y: event.clientY };
+            });
+
+            window.addEventListener('pointerdown', (event) => {
+                isMouseDown = true;
+                previousMousePosition = { x: event.clientX, y: event.clientY };
+            });
+
+            window.addEventListener('pointerup', () => {
+                isMouseDown = false;
+            });
+
+            window.addEventListener('touchmove', (event) => {
+                if (event.touches.length > 0) {
+                    const touch = event.touches[0];
+                    mouse.x = (touch.clientX / window.innerWidth) * 2 - 1;
+                    mouse.y = -(touch.clientY / window.innerHeight) * 2 + 1;
+
+                    if (isMouseDown) {
+                        const deltaX = touch.clientX - previousMousePosition.x;
+                        const deltaY = touch.clientY - previousMousePosition.y;
+
+                        targetRotation.y += deltaX * 0.005;
+                        targetRotation.x += deltaY * 0.005;
+                    }
+                    previousMousePosition = { x: touch.clientX, y: touch.clientY };
+                }
+            }, { passive: true });
+
+            window.addEventListener('touchstart', (event) => {
+                if (event.touches.length > 0) {
+                    isMouseDown = true;
+                    previousMousePosition = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+                }
+            }, { passive: true });
+
+            window.addEventListener('touchend', () => {
+                isMouseDown = false;
+            });
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const elapsedTime = clock.getElapsedTime();
+            const rawProgress = Math.min(1.0, elapsedTime / ASSEMBLY_DURATION);
+            const assemblyProgress = rawProgress * rawProgress * (3 - 2 * rawProgress);
+            let pulseScale = 1.0;
+            currentRotation.x += (targetRotation.x - currentRotation.x) * 0.05;
+            currentRotation.y += (targetRotation.y - currentRotation.y) * 0.05;
+            heartGroup.rotation.y = currentRotation.y + Math.sin(elapsedTime * 0.5) * 0.15;
+            heartGroup.rotation.x = currentRotation.x + Math.cos(elapsedTime * 0.4) * 0.08;
+            heartGroup.rotation.z = Math.sin(elapsedTime * 0.3) * 0.05;
+
+            if (ambientParticles) {
+                ambientParticles.rotation.y = elapsedTime * 0.025;
+                ambientParticles.rotation.x = elapsedTime * 0.012;
+            }
+
+            if (spiralParticles) {
+                spiralParticles.rotation.y = -elapsedTime * 0.35;
+            }
+
+            const positions = heartParticles.geometry.attributes.position.array;
+            const colors = heartParticles.geometry.attributes.color.array;
+            raycaster.setFromCamera(mouse, camera);
+            const planeZ = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+            const mouseWorldPos = new THREE.Vector3();
+            raycaster.ray.intersectPlane(planeZ, mouseWorldPos);
+            for (let i = 0; i < HEART_PARTICLE_COUNT; i++) {
+                const idx = i * 3;
+                const scX = scatteredPositions[idx];
+                const scY = scatteredPositions[idx + 1];
+                const scZ = scatteredPositions[idx + 2];
+                const origX = originalPositions[idx];
+                const origY = originalPositions[idx + 1];
+                const origZ = originalPositions[idx + 2];
+                const swirlAngle = (1 - assemblyProgress) * Math.PI * 4;
+                const cosA = Math.cos(swirlAngle);
+                const sinA = Math.sin(swirlAngle);
+                let interpolatedX = scX + (origX - scX) * assemblyProgress;
+                let interpolatedY = scY + (origY - scY) * assemblyProgress;
+                let interpolatedZ = scZ + (origZ - scZ) * assemblyProgress;
+
+                if (assemblyProgress < 1.0) {
+                    const rotX = interpolatedX * cosA - interpolatedZ * sinA;
+                    const rotZ = interpolatedX * sinA + interpolatedZ * cosA;
+                    interpolatedX = rotX;
+                    interpolatedZ = rotZ;
+                }
+
+                let targetX = interpolatedX * (assemblyProgress > 0.5 ? pulseScale : 1.0);
+                let targetY = interpolatedY * (assemblyProgress > 0.5 ? pulseScale : 1.0);
+                let targetZ = interpolatedZ * (assemblyProgress > 0.5 ? pulseScale : 1.0);
+
+                if (assemblyProgress > 0.3) {
+                    const currentPos = new THREE.Vector3(positions[idx], positions[idx + 1], positions[idx + 2]);
+                    const worldParticlePos = currentPos.clone().applyMatrix4(heartGroup.matrixWorld);
+                    const distToMouse = worldParticlePos.distanceTo(mouseWorldPos);
+                    const repelThreshold = 2.4;
+
+                    if (distToMouse < repelThreshold) {
+                        const force = (1 - distToMouse / repelThreshold) * 2.0;
+                        const dir = worldParticlePos.clone().sub(mouseWorldPos).normalize();
+                        targetX += dir.x * force * 2.2;
+                        targetY += dir.y * force * 2.2;
+                        targetZ += dir.z * force * 2.2;
+                    }
+                }
+
+                positions[idx] += (targetX - positions[idx]) * 0.10;
+                positions[idx + 1] += (targetY - positions[idx + 1]) * 0.10;
+                positions[idx + 2] += (targetZ - positions[idx + 2]) * 0.10;
+                if (pulseScale > 1.05 && assemblyProgress > 0.8) {
+                    const colorShift = (pulseScale - 1.0) * 0.5;
+                    colors[idx] = Math.min(1.0, colors[idx] + colorShift * 0.12);
+                    colors[idx + 1] = Math.min(1.0, colors[idx + 1] + colorShift * 0.06);
+                }
+            }
+
+            heartParticles.geometry.attributes.position.needsUpdate = true;
+            heartParticles.geometry.attributes.color.needsUpdate = true;
+            renderer.render(scene, camera);
+        }
+
+        window.onload = function () {
+            initScene();
+            initHeartParticles();
+            initBackgroundEffects();
+            initInteractions();
+            animate();
+        };
     </script>
 </body>
 </html>
