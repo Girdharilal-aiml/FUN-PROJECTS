@@ -21,6 +21,15 @@ canvas {
 </style>
 </head>
 <body>
+<canvas id="heart-canvas"></canvas>
+<script>
+const canvas = document.getElementById("heart-canvas");
+const ctx = canvas.getContext("2d");
+let width, height;
+function resize() {
+    width = canvas.width = innerWidth;
+    height = canvas.height = innerHeight;
+}
 
 </script>
 </body>
