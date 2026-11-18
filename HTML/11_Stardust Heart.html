@@ -31,6 +31,18 @@ function resize() {
     height = canvas.height = innerHeight;
 }
 
+addEventListener("resize", resize);
+resize();
+let angleX = 0;
+let angleY = 0;
+let isDragging = false;
+let lastX = 0;
+let lastY = 0;
+const particles = [];
+const fireflies = [];
+const timeStep = 0.03;
+
+
 </script>
 </body>
 </html>
