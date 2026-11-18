@@ -56,6 +56,12 @@ for (let i = 0; i < 15000; i++) {
                 Math.cos(4 * t)
             ) * 19,
 
+        targetZ: (Math.random() - 0.5) * 228,
+        color: `hsl(${Math.random() * 50 + 325},100%,${Math.random() * 40 + 50}%)`,
+        size: Math.random() * 2.2 + 0.8,
+        progress: 0,
+        assembleSpeed: Math.random() * 0.001 + 0.003,
+        offset: Math.random() * Math.PI * 2
     });
 }
 
