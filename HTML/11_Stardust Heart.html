@@ -41,7 +41,16 @@ let lastY = 0;
 const particles = [];
 const fireflies = [];
 const timeStep = 0.03;
-
+for (let i = 0; i < 15000; i++) {
+    const t = Math.random() * Math.PI * 2;
+    particles.push({
+        x: (Math.random() - 0.5) * width * 1.5,
+        y: (Math.random() - 0.5) * height * 1.5,
+        z: (Math.random() - 0.5) * 1000,
+        targetX: 16 * Math.pow(Math.sin(t), 3) * 19,
+       
+    });
+}
 
 </script>
 </body>
