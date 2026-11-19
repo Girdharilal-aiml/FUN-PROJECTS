@@ -79,6 +79,13 @@ function start(x, y) {
     lastX = x;
     lastY = y;
 }
+function move(x, y) {
+    if (!isDragging) return;
+    angleY += (x - lastX) * 0.007;
+    angleX += (y - lastY) * 0.007;
+    lastX = x;
+    lastY = y;
+}
 
 
 </script>
