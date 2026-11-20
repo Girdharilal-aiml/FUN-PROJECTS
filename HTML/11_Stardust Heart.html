@@ -101,6 +101,71 @@ addEventListener("touchmove", e => {
     }
 });
 
+addEventListener("touchend", () => (isDragging = false));
+let time = 0;
+function animate() {
+    ctx.fillStyle = "rgba(3,0,5,0.2)";
+    ctx.fillRect(0, 0, width, height);
+    const cx = width / 2;
+    const cy = height / 2;
+    time += timeStep;
+
+    fireflies.forEach(f => {
+        f.z -= 0.4;
+        if (f.z < -500) f.z = 500;
+        const scale = 400 / (400 + f.z);
+        const x = f.x * scale + cx;
+        const y = f.y * scale + cy;
+        if (x >= 0 && x <= width && y >= 0 && y <= height) {
+            ctx.fillStyle = `rgba(255,180,220,${
+                Math.abs(Math.sin(time + f.alpha)) * 0.4
+            })`;
+            ctx.fillRect(x, y, f.size * scale, f.size * scale);
+        }
+    });
+
+    const cosX = Math.cos(angleX);
+    const sinX = Math.sin(angleX);
+    const cosY = Math.cos(angleY);
+    const sinY = Math.sin(angleY);
+    particles.forEach(p => {
+        if (p.progress < 1) {
+            p.progress += p.assembleSpeed;
+
+            if (p.progress > 1) p.progress = 1;
+        }
+
+        const progress = 1 - Math.pow(1 - p.progress, 3);
+        const bx = p.x + (p.targetX - p.x) * progress;
+        const by = p.y + (p.targetY - p.y) * progress;
+        const bz = p.z + (p.targetZ - p.z) * progress;
+        const wave =
+            p.progress >= 1
+                ? Math.sin(time * 2 + p.offset) * 0.06 + 1
+                : 1;
+        const px = bx * wave;
+        const py = by * wave;
+        const pz = bz * wave;
+        const y1 = py * cosX - pz * sinX;
+        const z1 = py * sinX + pz * cosX;
+        const x2 = px * cosY + z1 * sinY;
+        const z2 = -px * sinY + z1 * cosY;
+        const perspective = 500 / (500 + z2);
+        ctx.beginPath();
+        ctx.arc(
+            x2 * perspective + cx,
+            y1 * perspective + cy,
+            Math.max(0.6, p.size * perspective),
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle = p.color;
+        ctx.fill();
+    });
+    requestAnimationFrame(animate);
+}
+animate();
 </script>
 </body>
 </html>
